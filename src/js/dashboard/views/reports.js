@@ -42,7 +42,7 @@ export const mount = (root) => {
     },
   });
   const drawSched = () => {
-    $('#rp-sched', root).innerHTML = reports.map((r) => `<li class="flex flex-wrap items-center justify-between gap-3 rounded-lg border border-line p-3"><div><p class="font-bold">${esc(r.name)}</p><p class="caption">${esc(r.type)} · ${esc(r.range)}</p></div><label class="sr-only" for="sc-${r.id}">Schedule for ${esc(r.name)}</label><select class="select !w-auto" id="sc-${r.id}" data-sched="${r.id}">${['Off', 'Weekly', 'Monthly'].map((o) => `<option${o === r.schedule ? ' selected' : ''}>${o}</option>`).join('')}</select></li>`).join('') || '<li class="text-small text-muted">Generate a report to schedule it.</li>';
+    $('#rp-sched', root).innerHTML = reports.map((r) => `<li class="sched-row flex flex-wrap items-center justify-between gap-3 rounded-lg border border-line p-3"><div><p class="font-bold">${esc(r.name)}</p><p class="caption">${esc(r.type)} · ${esc(r.range)}</p></div><label class="sr-only" for="sc-${r.id}">Schedule for ${esc(r.name)}</label><select class="select !w-auto" id="sc-${r.id}" data-sched="${r.id}">${['Off', 'Weekly', 'Monthly'].map((o) => `<option${o === r.schedule ? ' selected' : ''}>${o}</option>`).join('')}</select></li>`).join('') || '<li class="text-small text-muted">Generate a report to schedule it.</li>';
   };
   drawSched(); table.draw();
   root.addEventListener('change', (e) => { const s = e.target.closest('[data-sched]'); if (s) { const r = reports.find((x) => x.id === s.dataset.sched); r.schedule = s.value; toast(`${r.name}: ${s.value === 'Off' ? 'schedule turned off' : `prepared ${s.value.toLowerCase()}`}`, 'info'); } });

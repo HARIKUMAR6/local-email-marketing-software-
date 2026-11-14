@@ -12,7 +12,7 @@ let offPrefs = null;
 const api = { key: `vel_live_${'k7Qm2xT9pLw4RzN8vB3cYd6H'}`, shown: false };
 const panel = (k, body, i) => `<div id="panel-${k}" role="tabpanel" aria-labelledby="tab-${k}" tabindex="0" class="grid gap-4"${i ? ' hidden' : ''}>${body}</div>`;
 const card = (t, sub, body) => `<section class="panel"><div class="panel-head"><div><h2 class="h5">${t}</h2>${sub ? `<p class="caption">${sub}</p>` : ''}</div></div>${body}</section>`;
-const saveBtn = (label = 'Save changes') => `<div class="mt-4"><button class="btn btn-primary" type="submit">${label}</button> <span class="ms-2 text-small text-muted">Changes apply to this session.</span></div>`;
+const saveBtn = (label = 'Save changes') => `<div class="save-row"><button class="btn btn-primary" type="submit">${label}</button><span class="text-small text-muted">Changes apply to this session.</span></div>`;
 
 export const render = () => `
 ${pageHead('Settings', 'Manage your profile, workspace, team and billing.')}

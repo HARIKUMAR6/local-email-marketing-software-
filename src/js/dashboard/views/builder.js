@@ -64,7 +64,7 @@ ${pageHead('Email Builder', 'Design a campaign with drag-free blocks, then save,
   <div class="field"><label class="label" for="bd-pre">Preheader</label><input class="input" id="bd-pre"></div>
 </div>
 <div class="builder">
-  <aside class="panel" aria-labelledby="bd-blocks"><h2 class="h6 mb-3" id="bd-blocks">Add a block</h2><div class="grid gap-2 sm:grid-cols-3 lg:grid-cols-1">${PALETTE.map(([t, l, i]) => `<button type="button" class="palette-btn" data-add="${t}">${icon(i)}<span>${l}</span></button>`).join('')}</div></aside>
+  <aside class="panel" aria-labelledby="bd-blocks"><h2 class="h6 mb-3" id="bd-blocks">Add a block</h2><div class="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-1">${PALETTE.map(([t, l, i]) => `<button type="button" class="palette-btn" data-add="${t}">${icon(i)}<span>${l}</span></button>`).join('')}</div></aside>
   <section aria-label="Email canvas" class="min-w-0">
     <div class="mb-3 flex items-center justify-between gap-3"><p class="text-small text-muted" id="bd-hint">Select a block to edit it.</p><div class="segmented" role="group" aria-label="Preview size"><button type="button" data-device="desktop" aria-pressed="true">${icon('monitor')}<span class="sr-only">Desktop</span></button><button type="button" data-device="mobile" aria-pressed="false">${icon('smartphone')}<span class="sr-only">Mobile</span></button></div></div>
     <div class="canvas"><div class="paper canvas-paper" id="bd-canvas"></div></div>

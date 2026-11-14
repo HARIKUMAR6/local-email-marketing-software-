@@ -53,6 +53,9 @@ export const initTopbar = ({ go }) => {
   mount('topbar', topbarTemplate());
   const box = $('[data-search]');
   const input = $('#app-search');
+  const phone = window.matchMedia('(max-width: 639.98px)');
+  const placeholder = () => { input.placeholder = phone.matches ? 'Search…' : 'Search campaigns, contacts, pages…'; };
+  placeholder(); phone.addEventListener('change', placeholder);
   const list = $('#search-results');
   let items = [];
   let active = -1;

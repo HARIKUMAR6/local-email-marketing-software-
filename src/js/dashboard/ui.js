@@ -115,14 +115,14 @@ export const dataTable = (el, o) => {
       : `<th scope="col" class="${c.cls || ''}" aria-sort="${st.key === c.key ? (st.dir === 'asc' ? 'ascending' : 'descending') : 'none'}"><button type="button" class="th-btn" data-sort="${c.key}">${esc(c.label)}<span class="th-arrow" aria-hidden="true">${st.key === c.key ? (st.dir === 'asc' ? '↑' : '↓') : '↕'}</span></button></th>`).join('');
     const body = slice.length ? slice.map((r) => `<tr data-id="${r.id}"${st.sel.has(r.id) ? ' class="is-selected"' : ''}>
         ${o.selectable ? `<td class="w-10"><input class="checkbox" type="checkbox" data-sel="${r.id}" aria-label="Select ${esc(r.name || r.id)}"${st.sel.has(r.id) ? ' checked' : ''}></td>` : ''}
-        ${o.columns.map((c) => `<td class="${c.cls || ''}" data-label="${esc(c.label)}">${c.html ? c.html(r) : esc(r[c.key])}</td>`).join('')}
+        ${o.columns.map((c, ci) => `<td class="${c.cls || ''}${ci === 0 ? ' cell-main' : ''}" data-label="${esc(c.label)}">${c.html ? c.html(r) : esc(r[c.key])}</td>`).join('')}
         ${o.actions ? `<td class="tbl-actions">${o.actions(r)}</td>` : ''}</tr>`).join('')
       : `<tr><td colspan="${o.columns.length + (o.selectable ? 1 : 0) + (o.actions ? 1 : 0)}"><div class="empty">${icon('search')}<p class="font-bold">${esc(o.empty || 'Nothing to show')}</p><p class="text-small">Try changing your search or filters.</p></div></td></tr>`;
     const from = total ? (st.page - 1) * size + 1 : 0; const to = Math.min(total, st.page * size);
     const nums = Array.from({ length: pages }, (_, i) => i + 1).filter((p) => p === 1 || p === pages || Math.abs(p - st.page) <= 1);
     let last = 0;
     const pager = nums.map((p) => { const gap = p - last > 1 ? '<span class="pg-gap" aria-hidden="true">…</span>' : ''; last = p; return `${gap}<button type="button" class="pg${p === st.page ? ' is-on' : ''}" data-page="${p}" aria-label="Page ${p}"${p === st.page ? ' aria-current="page"' : ''}>${p}</button>`; }).join('');
-    el.innerHTML = `<div class="tbl-wrap" tabindex="0" role="region" aria-label="${esc(o.label || 'Data table')}"><table class="tbl"><thead><tr>${o.selectable ? `<th class="w-10"><input class="checkbox" type="checkbox" data-sel-all aria-label="Select all rows on this page"${allOn ? ' checked' : ''}></th>` : ''}${th}${o.actions ? '<th scope="col"><span class="sr-only">Actions</span></th>' : ''}</tr></thead><tbody>${body}</tbody></table></div>
+    el.innerHTML = `<div class="tbl-wrap" tabindex="0" role="region" aria-label="${esc(o.label || 'Data table')}"><table class="tbl tbl-stack"><thead><tr>${o.selectable ? `<th class="w-10"><input class="checkbox" type="checkbox" data-sel-all aria-label="Select all rows on this page"${allOn ? ' checked' : ''}></th>` : ''}${th}${o.actions ? '<th scope="col"><span class="sr-only">Actions</span></th>' : ''}</tr></thead><tbody>${body}</tbody></table></div>
       <div class="pager"><p class="text-small text-muted" aria-live="polite">Showing ${from}–${to} of ${total}</p><nav class="flex items-center gap-1" aria-label="Pagination"><button type="button" class="pg" data-page="${st.page - 1}" aria-label="Previous page"${st.page === 1 ? ' disabled' : ''}>${icon('chevronLeft')}</button>${pager}<button type="button" class="pg" data-page="${st.page + 1}" aria-label="Next page"${st.page === pages ? ' disabled' : ''}>${icon('chevronRight')}</button></nav></div>`;
     hydrateIcons(el);
     o.onSelect?.([...st.sel]);
@@ -163,5 +163,5 @@ export const selectTab = (tab) => {
 };
 
 /* ---------- page header ---------- */
-export const pageHead = (title, sub = '', actions = '') => `<header class="page-head"><div class="min-w-0"><h1 class="h3" tabindex="-1">${esc(title)}</h1>${sub ? `<p class="mt-1 text-muted">${sub}</p>` : ''}</div>${actions ? `<div class="flex flex-wrap items-center gap-2">${actions}</div>` : ''}</header>`;
+export const pageHead = (title, sub = '', actions = '') => `<header class="page-head"><div class="min-w-0"><h1 class="h3" tabindex="-1">${esc(title)}</h1>${sub ? `<p class="mt-1 text-muted">${sub}</p>` : ''}</div>${actions ? `<div class="page-actions flex flex-wrap items-center gap-2">${actions}</div>` : ''}</header>`;
 export const tabsBar = (id, tabs, active = 0) => `<div class="tablist" role="tablist" aria-label="${esc(id)}" data-dtabs>${tabs.map(([key, label], i) => `<button class="tab" type="button" role="tab" id="tab-${key}" aria-controls="panel-${key}" aria-selected="${i === active}" tabindex="${i === active ? 0 : -1}">${esc(label)}</button>`).join('')}</div>`;

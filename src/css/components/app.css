@@ -192,3 +192,72 @@
 /* English placeholders keep their punctuation in order inside RTL layouts */
 [dir="rtl"] :is(input, textarea):placeholder-shown { unicode-bidi: plaintext; }
 [dir="rtl"] .tbl :is(td, th) { unicode-bidi: plaintext; }
+
+/* Save row (settings forms) */
+.save-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem; margin-top: 1rem; }
+
+/* ==========================================================================
+   Mobile alignment (phones < 640px). Tablet and desktop layouts are unchanged.
+   ========================================================================== */
+@media (max-width: 639.98px) {
+  .app-content { padding-block: 1rem; }
+  .app-content-inner, .view-body { gap: 1rem; }
+
+  /* Topbar: search takes the free space, icon buttons keep a steady gap */
+  .app-topbar { gap: 0.5rem; padding-inline: 0.75rem; }
+  .app-topbar .search { max-width: none; }
+  .topbar-actions { gap: 0.375rem; }
+
+  /* Page header: title block above, actions in a tidy two-column grid */
+  .page-head { flex-direction: column; align-items: stretch; gap: 0.875rem; }
+  .page-head > .page-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.5rem; width: 100%; }
+  .page-head > .page-actions > .btn, .page-head > .page-actions > .select { width: 100% !important; min-width: 0; justify-content: center; padding-inline: 0.75rem; }
+  .page-head > .page-actions > .select { grid-column: 1 / -1; }
+  .page-head > .page-actions > :last-child:nth-child(odd) { grid-column: 1 / -1; }
+
+  /* Toolbars: search on its own row, filters share the next rows evenly */
+  .toolbar { gap: 0.625rem; padding: 0.75rem; }
+  .toolbar .search-box { flex: 1 1 100%; max-width: none; }
+  .toolbar .select { flex: 1 1 9rem; width: auto; min-width: 0; }
+  .toolbar .chips { width: 100%; }
+  .bulk { width: 100%; margin: 0; justify-content: space-between; }
+
+  /* Tabs: even two-column grid */
+  [data-dtabs] { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.5rem; }
+  [data-dtabs] .tab { justify-content: center; min-width: 0; padding-inline: 0.5rem; text-align: center; }
+  [data-dtabs] > :last-child:nth-child(odd) { grid-column: 1 / -1; }
+
+  /* Data tables become stacked rows (sorting stays available in the header strip) */
+  .tbl-stack, .tbl-stack tbody, .tbl-stack tr, .tbl-stack td { display: block; width: 100%; }
+  .tbl-stack thead { display: block; }
+  .tbl-stack thead tr { display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem 0.5rem; padding: 0.5rem 0.75rem; background: var(--v-surface-2); border-bottom: 1px solid var(--v-border); }
+  .tbl-stack thead th { display: block; width: auto; padding: 0.25rem 0.375rem; border: 0; background: none; position: static; }
+  .tbl-stack thead th:not([aria-sort]):not(.w-10) { display: none; }
+  .tbl-stack tbody tr { position: relative; display: grid; gap: 0.375rem; padding: 0.875rem 0.75rem; border-bottom: 1px solid var(--v-border); }
+  .tbl-stack tbody td { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0; border: 0; text-align: end; white-space: normal; }
+  .tbl-stack tbody td[data-label]::before { content: attr(data-label); flex-shrink: 0; font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--v-muted); text-align: start; }
+  .tbl-stack tbody td.cell-main { display: block; padding-inline-end: 2rem; text-align: start; }
+  .tbl-stack tbody td.cell-main::before { display: none; }
+  .tbl-stack tbody td.w-10 { position: absolute; inset-block-start: 0.875rem; inset-inline-end: 0.75rem; width: auto; z-index: 1; }
+  .tbl-stack tbody td.tbl-actions { justify-content: flex-end; margin-top: 0.25rem; padding-top: 0.5rem; border-top: 1px dashed var(--v-border); }
+  .tbl-stack tbody td > .flex { justify-content: flex-end; }
+  .tbl-stack tbody td.cell-main > .flex { justify-content: flex-start; }
+  .pager { justify-content: center; text-align: center; padding: 0.75rem; }
+
+  /* Cards, panels and groups */
+  .panel { padding: 1rem; }
+  .sched-row > .select { width: 100%; }
+  .sched-row > div:first-child { min-width: 0; }
+  .save-row { flex-direction: column; align-items: stretch; }
+  .save-row .btn { width: 100%; }
+  .legend { gap: 0.375rem 0.875rem; }
+
+  /* Modals: stack footer actions */
+  .modal-foot { flex-direction: column-reverse; align-items: stretch; }
+  .modal-foot .btn { width: 100%; }
+  .modal-head, .modal-body, .modal-foot { padding-inline: 1rem; }
+  .toasts { inset-inline: 0.75rem; width: auto; bottom: 0.75rem; }
+}
+
+/* Tablet: keep the primary column readable inside the scrollable table */
+@media (min-width: 640px) and (max-width: 1279.98px) { .tbl-stack td.cell-main { min-width: 13rem; } }

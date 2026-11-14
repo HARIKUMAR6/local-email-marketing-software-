@@ -14,7 +14,7 @@ export const sidebarTemplate = () => {
   return `
 <aside class="app-sidebar" id="app-sidebar" aria-label="Main navigation">
   <div class="sidebar-head">
-    ${logo({ href: 'dashboard/index.html' })}
+    ${logo({ href: 'index.html' })}
     <button type="button" class="btn-icon lg:hidden" data-sidebar-close aria-label="Close sidebar">${icon('close')}</button>
   </div>
   <nav class="sidebar-nav" aria-label="Dashboard">
