@@ -1,0 +1,73 @@
+/* Buttons + links */
+
+.btn {
+  --btn-h: 2.875rem;
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  min-height: var(--btn-h);
+  padding: 0 1.375rem;
+  border: 1.5px solid transparent;
+  border-radius: 999px;
+  font-size: 0.9375rem; font-weight: 600; line-height: 1;
+  white-space: nowrap; text-decoration: none; cursor: pointer;
+  user-select: none;
+  transition: background-color var(--v-dur-fast) var(--v-ease-out), color var(--v-dur-fast) var(--v-ease-out),
+    border-color var(--v-dur-fast) var(--v-ease-out), box-shadow var(--v-dur) var(--v-ease-out),
+    transform var(--v-dur-fast) var(--v-ease-out);
+}
+.btn:active { transform: translateY(1px); }
+.btn svg { width: 1.125rem; height: 1.125rem; flex-shrink: 0; }
+.btn:disabled, .btn[aria-disabled="true"] { opacity: 0.5; pointer-events: none; }
+
+.btn-primary { background: var(--v-primary); color: var(--v-on-primary); box-shadow: var(--v-shadow-sm); }
+.btn-primary:hover { background: var(--v-primary-hover); box-shadow: var(--v-shadow-glow); }
+
+.btn-accent { background: var(--v-accent); color: var(--v-on-accent); }
+.btn-accent:hover { background: var(--v-accent-hover); }
+
+.btn-secondary { background: var(--v-surface-inverse); color: var(--v-text-inverse); }
+.btn-secondary:hover { background: var(--v-primary); color: var(--v-on-primary); }
+
+.btn-outline { background: transparent; color: var(--v-text); border-color: var(--v-border-strong); }
+.btn-outline:hover { border-color: var(--v-primary); color: var(--v-primary); }
+
+.btn-ghost { background: transparent; color: var(--v-text); }
+.btn-ghost:hover { background: var(--v-surface-2); }
+
+.btn-sm { --btn-h: 2.25rem; padding: 0 1rem; font-size: 0.875rem; }
+.btn-lg { --btn-h: 3.375rem; padding: 0 1.75rem; font-size: 1rem; }
+.btn-block { width: 100%; }
+
+.btn-icon {
+  display: inline-grid; place-items: center;
+  width: 2.75rem; height: 2.75rem; padding: 0;
+  border: 1px solid var(--v-border); border-radius: 999px;
+  background: var(--v-surface); color: var(--v-text); cursor: pointer;
+  transition: background-color var(--v-dur-fast), border-color var(--v-dur-fast), color var(--v-dur-fast);
+}
+.btn-icon:hover { border-color: var(--v-primary); color: var(--v-primary); }
+.btn-icon svg { width: 1.25rem; height: 1.25rem; }
+
+/* Links */
+.link {
+  color: var(--v-link); font-weight: 600;
+  text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 0.2em;
+  text-decoration-color: color-mix(in srgb, currentColor 35%, transparent);
+  transition: color var(--v-dur-fast), text-decoration-color var(--v-dur-fast);
+}
+.link:hover { color: var(--v-link-hover); text-decoration-color: currentColor; }
+.link-muted { color: var(--v-muted); text-decoration: none; transition: color var(--v-dur-fast); }
+.link-muted:hover { color: var(--v-text); }
+
+/* Segmented toggle (used for RTL / LTR) */
+.segmented {
+  display: inline-flex; padding: 3px; gap: 2px;
+  border: 1px solid var(--v-border); border-radius: 999px; background: var(--v-surface-2);
+}
+.segmented button {
+  min-width: 2.75rem; height: 2.125rem; padding: 0 0.75rem;
+  border-radius: 999px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.06em;
+  color: var(--v-muted); cursor: pointer;
+  transition: background-color var(--v-dur-fast), color var(--v-dur-fast);
+}
+.segmented button:hover { color: var(--v-text); }
+.segmented button[aria-pressed="true"] { background: var(--v-surface); color: var(--v-text); box-shadow: var(--v-shadow-xs); }

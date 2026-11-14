@@ -1,0 +1,32 @@
+// Public pages entry. Mounts shared components, then wires behaviours.
+import { initTheme } from './core/theme.js';
+import { initDirection } from './core/direction.js';
+import { initScrollTop } from './core/scroll-top.js';
+import { initReveal } from './core/reveal.js';
+import { hydrateIcons } from './components/icons.js';
+import { initHeader } from './components/header.js';
+import { initFooter } from './components/footer.js';
+import { initDropdowns } from './components/dropdown.js';
+import { initMobileMenu } from './components/mobile-menu.js';
+import { initWorkflow } from './components/workflow.js';
+import { initPricing } from './components/pricing.js';
+import { initCharts } from './components/charts.js';
+import { initTabs } from './components/tabs.js';
+import { initForms } from './components/form.js';
+import { initMaps } from './components/map.js';
+
+initHeader();
+initFooter();
+initWorkflow();
+initPricing();
+initCharts();
+hydrateIcons();
+initTabs();
+initForms();
+initMaps();
+initTheme();
+initDirection();
+initDropdowns();
+initMobileMenu();
+initScrollTop();
+initReveal();

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="VELORA">
+  <defs>
+    <linearGradient id="vm-body" x1="10" y1="6" x2="54" y2="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1B2A55"/>
+      <stop offset="0.55" stop-color="#3B57E0"/>
+      <stop offset="1" stop-color="#526FF5"/>
+    </linearGradient>
+    <linearGradient id="vm-orbit" x1="8" y1="48" x2="58" y2="14" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#43D6C5" stop-opacity="0"/>
+      <stop offset="0.35" stop-color="#43D6C5"/>
+      <stop offset="1" stop-color="#9CEBE2"/>
+    </linearGradient>
+  </defs>
+  <path d="M32 3.5 54.2 11a3 3 0 0 1 1.8 2.8V30c0 14.6-9.7 25.1-23.1 30.7a2.3 2.3 0 0 1-1.8 0C17.7 55.1 8 44.6 8 30V13.8A3 3 0 0 1 9.8 11Z" fill="url(#vm-body)"/>
+  <path d="M32 3.5 9.8 11A3 3 0 0 0 8 13.8V30c0 14.6 9.7 25.1 23.1 30.7.3.1.6.2.9.2Z" fill="#fff" fill-opacity=".07"/>
+  <path d="M32 7.2 52.5 14v16c0 12.6-8.2 21.9-20.5 27.2C19.7 51.9 11.5 42.6 11.5 30V14Z" fill="none" stroke="#fff" stroke-opacity=".14" stroke-width="1"/>
+  <path d="M18 24.5h28a2 2 0 0 1 2 2v14.5a3 3 0 0 1-3 3H19a3 3 0 0 1-3-3V26.5a2 2 0 0 1 2-2Z" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="2"/>
+  <path d="M17.5 24.5 32 36.5l14.5-12" fill="none" stroke="#fff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M7 41c7.5 10.5 31 11 44.5-8.5 2-2.9 3.5-6 4.5-9" fill="none" stroke="url(#vm-orbit)" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M55 8.5l1.5 4.3 4.3 1.5-4.3 1.5L55 20.1l-1.5-4.3-4.3-1.5 4.3-1.5Z" fill="#43D6C5"/>
+</svg>

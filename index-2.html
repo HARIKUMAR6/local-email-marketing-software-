@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-base="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VELORA — Automation-first Email Marketing</title>
+  <meta name="description" content="Automate welcome, cart, win-back and post-purchase journeys with VELORA. Segment, personalise and optimise every message from one platform.">
+  <meta name="theme-color" content="#101D38">
+  <script>(function(){var r=document.documentElement;r.classList.add('js');try{var t=localStorage.getItem('velora-theme'),d=localStorage.getItem('velora-dir');r.dataset.theme=t||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');if(d==='rtl'||d==='ltr')r.dir=d;}catch(e){r.dataset.theme='light';}})();</script>
+  <link rel="icon" type="image/svg+xml" href="assets/svg/logo-mark.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="assets/css/velora.css">
+  <script type="module" src="src/js/main.js"></script>
+</head>
+<body>
+  <div data-component="header"></div>
+
+  <main id="main">
+
+    <!-- 1 · Automation hero + workflow visual -->
+    <section class="hero hero-center scope-dark" aria-labelledby="hero-title">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-photo is-full"><img src="assets/images/public/home-2/hero-data.jpg" alt="Marketer working at a screen as data visualisations glow across their face" decoding="async" fetchpriority="high"></div>
+      <div class="container-v">
+        <div class="hero-content reveal">
+          <span class="badge badge-accent badge-dot">Automation-first email marketing</span>
+          <h1 id="hero-title" class="h1">Set it up once. <span class="text-gradient">Let every journey run itself.</span></h1>
+          <p class="lead">Welcome new subscribers, recover carts, win back quiet contacts and thank customers — automatically, with every message personal and on time.</p>
+          <div class="cta-group is-center">
+            <a class="btn btn-primary btn-lg" href="signup.html">Get Started <span data-icon="arrowRight"></span></a>
+            <a class="btn btn-outline btn-lg" href="#journeys">See how journeys work</a>
+          </div>
+        </div>
+        <div class="mx-auto mt-10 max-w-[60rem] reveal" data-delay="2">
+          <figure class="pv" role="img" aria-label="Automation workflow: a new subscriber receives a welcome email, then the journey branches on whether they clicked the offer, sending product tips or a nurture series">
+            <div class="pv-bar"><span class="pv-dots"><i></i><i></i><i></i></span><span class="pv-title">Journey · Welcome and convert</span><span class="ms-auto chip is-accent"><span class="pulse-dot"></span>Live</span></div>
+            <div class="pv-body">
+              <div data-component="workflow-canvas"></div>
+              <ol class="vflow md:hidden">
+                <li class="vflow-item"><span class="vflow-dot"><span data-icon="userPlus"></span></span><div><h4>New subscriber</h4><p>Joins the Newsletter list</p></div></li>
+                <li class="vflow-item"><span class="vflow-dot"><span data-icon="mail"></span></span><div><h4>Welcome email</h4><p>Sent instantly · 68% opens</p></div></li>
+                <li class="vflow-item"><span class="vflow-dot is-accent"><span data-icon="split"></span></span><div><h4>Clicked the offer?</h4><p>Yes → product tips · No → nurture series</p></div></li>
+              </ol>
+            </div>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2 · Marketing challenges and solutions -->
+    <section id="challenges" class="section" aria-labelledby="challenges-title">
+      <div class="container-v">
+        <div class="grid gap-12 lg:grid-cols-[5fr_7fr] lg:gap-16">
+          <div class="grid content-start gap-6 self-start lg:sticky lg:top-28">
+            <div class="grid gap-4 reveal">
+              <span class="eyebrow">Challenges and solutions</span>
+              <h2 id="challenges-title">From scattered sends to one smart system</h2>
+              <p class="lead">Most teams lose hours to manual work and one-size-fits-all blasts. VELORA replaces both.</p>
+            </div>
+            <div class="photo photo-shade reveal aspect-[16/8]">
+              <img src="assets/images/public/home-2/challenges-board.jpg" alt="Wall of sticky notes mapping customer problems to marketing solutions" loading="lazy" decoding="async">
+              <div class="photo-cap"><p class="font-bold">Every problem has a smarter workflow</p></div>
+            </div>
+            <figure class="pv reveal" role="img" aria-label="Chart comparing revenue per send for manual campaigns against automated journeys over four weeks">
+              <div class="pv-body">
+                <div class="flex flex-wrap items-center justify-between gap-2"><p class="pv-label">Revenue per send</p><div class="flex gap-3 text-small font-semibold"><span class="inline-flex items-center gap-2"><i class="h-2.5 w-2.5 rounded-full bg-line-strong"></i>Manual</span><span class="inline-flex items-center gap-2"><i class="h-2.5 w-2.5 rounded-full bg-primary"></i>Automated</span></div></div>
+                <div class="mt-4 flex h-40 items-end justify-between gap-3" aria-hidden="true">
+                  <div class="flex h-full flex-1 items-end gap-1.5"><i class="pv-col w-full rounded-t-md bg-line-strong h-[30%]"></i><i class="pv-col w-full rounded-t-md bg-primary h-[46%]"></i></div>
+                  <div class="flex h-full flex-1 items-end gap-1.5"><i class="pv-col w-full rounded-t-md bg-line-strong h-[34%]"></i><i class="pv-col w-full rounded-t-md bg-primary h-[62%]"></i></div>
+                  <div class="flex h-full flex-1 items-end gap-1.5"><i class="pv-col w-full rounded-t-md bg-line-strong h-[28%]"></i><i class="pv-col w-full rounded-t-md bg-primary h-[78%]"></i></div>
+                  <div class="flex h-full flex-1 items-end gap-1.5"><i class="pv-col w-full rounded-t-md bg-line-strong h-[36%]"></i><i class="pv-col w-full rounded-t-md bg-primary h-[96%]"></i></div>
+                </div>
+                <div class="mt-2 flex justify-between text-small text-muted"><span>Wk 1</span><span>Wk 2</span><span>Wk 3</span><span>Wk 4</span></div>
+              </div>
+            </figure>
+          </div>
+
+          <div class="grid gap-6">
+            <article class="grid items-stretch gap-3 md:grid-cols-[1fr_auto_1fr] reveal">
+              <div class="pv-tile flex gap-3"><span class="icon-tile !h-10 !w-10 !bg-danger/10 !text-danger"><span data-icon="close"></span></span><div><h3 class="card-title !mb-1 !text-base">Manual sends eat your week</h3><p class="card-text !text-sm">Building and scheduling every email by hand.</p></div></div>
+              <span class="grid place-items-center text-primary"><span data-icon="arrowRight" class="rotate-90 md:rotate-0 rtl:md:rotate-180"></span></span>
+              <div class="pv-tile flex gap-3 !border-primary/40 !bg-primary-soft"><span class="icon-tile !h-10 !w-10"><span data-icon="zap"></span></span><div><h3 class="card-title !mb-1 !text-base">Journeys run 24/7</h3><p class="card-text !text-sm">Triggers send at the right moment.</p><span class="badge badge-success mt-2">12 hrs saved weekly</span></div></div>
+            </article>
+            <article class="grid items-stretch gap-3 md:grid-cols-[1fr_auto_1fr] reveal">
+              <div class="pv-tile flex gap-3"><span class="icon-tile !h-10 !w-10 !bg-danger/10 !text-danger"><span data-icon="close"></span></span><div><h3 class="card-title !mb-1 !text-base">One-size-fits-all blasts</h3><p class="card-text !text-sm">Everyone gets the same message.</p></div></div>
+              <span class="grid place-items-center text-primary"><span data-icon="arrowRight" class="rotate-90 md:rotate-0 rtl:md:rotate-180"></span></span>
+              <div class="pv-tile flex gap-3 !border-primary/40 !bg-primary-soft"><span class="icon-tile !h-10 !w-10"><span data-icon="filter"></span></span><div><h3 class="card-title !mb-1 !text-base">Live behaviour segments</h3><p class="card-text !text-sm">Audiences update as people act.</p><span class="badge badge-success mt-2">+37% click rate</span></div></div>
+            </article>
+            <article class="grid items-stretch gap-3 md:grid-cols-[1fr_auto_1fr] reveal">
+              <div class="pv-tile flex gap-3"><span class="icon-tile !h-10 !w-10 !bg-danger/10 !text-danger"><span data-icon="close"></span></span><div><h3 class="card-title !mb-1 !text-base">Warm leads go cold</h3><p class="card-text !text-sm">No follow-up after the first click.</p></div></div>
+              <span class="grid place-items-center text-primary"><span data-icon="arrowRight" class="rotate-90 md:rotate-0 rtl:md:rotate-180"></span></span>
+              <div class="pv-tile flex gap-3 !border-primary/40 !bg-primary-soft"><span class="icon-tile !h-10 !w-10"><span data-icon="repeat"></span></span><div><h3 class="card-title !mb-1 !text-base">Nurture and win-back flows</h3><p class="card-text !text-sm">Quiet contacts come back on their own.</p><span class="badge badge-success mt-2">2.4× re-engagement</span></div></div>
+            </article>
+            <article class="grid items-stretch gap-3 md:grid-cols-[1fr_auto_1fr] reveal">
+              <div class="pv-tile flex gap-3"><span class="icon-tile !h-10 !w-10 !bg-danger/10 !text-danger"><span data-icon="close"></span></span><div><h3 class="card-title !mb-1 !text-base">Reports in five tools</h3><p class="card-text !text-sm">No clear view of what earns revenue.</p></div></div>
+              <span class="grid place-items-center text-primary"><span data-icon="arrowRight" class="rotate-90 md:rotate-0 rtl:md:rotate-180"></span></span>
+              <div class="pv-tile flex gap-3 !border-primary/40 !bg-primary-soft"><span class="icon-tile !h-10 !w-10"><span data-icon="chart"></span></span><div><h3 class="card-title !mb-1 !text-base">One revenue dashboard</h3><p class="card-text !text-sm">Every send tied to every sale.</p><span class="badge badge-success mt-2">Full attribution</span></div></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 · Automation journeys -->
+    <section id="journeys" class="section section-alt" aria-labelledby="journeys-title">
+      <div class="container-v">
+        <div class="section-head is-center reveal">
+          <span class="eyebrow">Automation journeys</span>
+          <h2 id="journeys-title">A ready journey for every moment that matters</h2>
+          <p class="lead">Start from a proven flow or build your own, then watch it perform in real time.</p>
+        </div>
+        <div class="photo photo-shade reveal mb-10 aspect-[16/10] sm:aspect-[21/7]">
+          <img src="assets/images/public/home-2/journeys-marketing.jpg" alt="Tablet showing online marketing insights beside glasses and a coffee on a tidy desk" loading="lazy" decoding="async">
+          <div class="photo-cap"><p class="font-bold">From first hello to repeat purchase</p><p class="text-small">Every stage of the customer journey, automated.</p></div>
+        </div>
+        <div data-tabs class="grid gap-8">
+          <div class="tablist is-center" role="tablist" aria-label="Journeys">
+            <button class="tab" role="tab" id="t-welcome" aria-controls="p-welcome" aria-selected="true"><span data-icon="userPlus"></span>Welcome series</button>
+            <button class="tab" role="tab" id="t-cart" aria-controls="p-cart" aria-selected="false"><span data-icon="cart"></span>Abandoned cart</button>
+            <button class="tab" role="tab" id="t-winback" aria-controls="p-winback" aria-selected="false"><span data-icon="repeat"></span>Win-back</button>
+            <button class="tab" role="tab" id="t-post" aria-controls="p-post" aria-selected="false"><span data-icon="heart"></span>Post-purchase</button>
+          </div>
+
+          <div class="tabpanel grid items-start gap-6 lg:grid-cols-2" role="tabpanel" id="p-welcome" aria-labelledby="t-welcome">
+            <div class="card"><ol class="vflow">
+              <li class="vflow-item"><span class="vflow-dot"><span data-icon="userPlus"></span></span><div><h4>Subscriber joins</h4><p>Triggered by any form, import or integration.</p></div></li>
+              <li class="vflow-item"><span class="vflow-dot is-accent"><span data-icon="mail"></span></span><div><h4>Welcome email · instant</h4><p>Introduce your brand and set expectations.</p></div></li>
+              <li class="vflow-item"><span class="vflow-dot"><span data-icon="clock"></span></span><div><h4>Wait 2 days</h4><p>Give new contacts time to explore.</p></div></li>
+              <li class="vflow-item"><span class="vflow-dot is-accent"><span data-icon="sparkles"></span></span><div><h4>Product story</h4><p>Dynamic picks based on what they clicked.</p></div></li>
+              <li class="vflow-item"><span class="vflow-dot"><span data-icon="tag"></span></span><div><h4>First-order offer</h4><p>A timed incentive that nudges the first purchase.</p></div></li>
+            </ol></div>
+            <figure class="pv reveal" role="img" aria-label="Welcome series funnel: 100% sent, 68% opened, 31% clicked, 14% purchased">
+              <div class="pv-body grid gap-4">
+                <div class="flex items-end justify-between"><div><p class="pv-label">Welcome series results</p><p class="pv-num">14% convert</p></div><span class="badge badge-success">+6.2 pts</span></div>
+                <div class="grid gap-3 text-small font-semibold">
+                  <div><div class="mb-1 flex justify-between"><span>Sent</span><span>100%</span></div><span class="pv-track block !h-3"><i class="pv-fill" style="width:100%"></i></span></div>
+                  <div><div class="mb-1 flex justify-between"><span>Opened</span><span>68%</span></div><span class="pv-track block !h-3"><i class="pv-fill" style="width:68%"></i></span></div>
+                  <div><div class="mb-1 flex justify-between"><span>Clicked</span><span>31%</span></div><span class="pv-track block !h-3"><i class="pv-fill is-accent" style="width:31%"></i></span></div>
+                  <div><div class="mb-1 flex justify-between"><span>Purchased</span><span>14%</span></div><span class="pv-track block !h-3"><i class="pv-fill is-accent" style="width:14%"></i></span></div>
+                </div>
+              </div>
+            </figure>
+          </div>
+
+          <div class="tabpanel grid items-start gap-6 lg:grid-cols-2" role="tabpanel" id="p-cart" aria-labelledby="t-cart" hidden>
+            <div class="card"><ol class="vflow">
+              <li class="vflow-item"><span class="vflow-dot"><span data-icon="cart"></span></span><div><h4>Cart left behind</h4><p>Synced from your store in real time.</p></div></li>
+              <li class="vflow-item"><span class="vflow-dot is-accent"><span data-icon="clock"></span></span><div><h4>Wait 1 hour</h4><p>Skip anyone who completes checkout.</p></div></li>
+              <li class="vflow-item"><span class="vflow-dot"><span data-icon="mail"></span></span><div><h4>Reminder with cart items</h4><p>Product images, prices and one-click return.</p></div></li>
+              <li class="vflow-item"><span class="vflow-dot is-accent"><span data-icon="clock"></span></span><div><h4>Wait 1 day</h4><p>Check again before sending the next message.</p></div></li>
+              <li class="vflow-item"><span class="vflow-dot"><span data-icon="tag"></span></span><div><h4>10% incentive</h4><p>A final nudge with a single-use code.</p></div></li>
+            </ol></div>
+            <figure class="pv reveal" role="img" aria-label="Abandoned cart results: 21% of carts recovered, 48.2 thousand dollars recovered revenue">
+              <div class="pv-body flex flex-wrap items-center gap-6">
+                <svg viewBox="0 0 36 36" class="h-36 w-36 shrink-0 -rotate-90" aria-hidden="true" focusable="false"><circle cx="18" cy="18" r="14" fill="none" class="stroke-surface-2" stroke-width="5"/><circle cx="18" cy="18" r="14" fill="none" class="stroke-primary" stroke-width="5" stroke-linecap="round" pathLength="100" stroke-dasharray="21 100"/></svg>
+                <div class="grid gap-3"><div><p class="pv-label">Carts recovered</p><p class="pv-num">21%</p></div><div><p class="pv-label">Recovered revenue</p><p class="pv-num">$48.2k</p></div><span class="badge badge-success w-fit">+$9.1k this month</span></div>
+              </div>
+            </figure>
+          </div>
+
+          <div class="tabpanel grid items-start gap-6 lg:grid-cols-2" role="tabpanel" id="p-winback" aria-labelledby="t-winback" hidden>
+            <div class="card"><ol class="vflow">
+              <li class="vflow-item"><span class="vflow-dot"><span data-icon="clock"></span></span><div><h4>90 days inactive</h4><p>Detected automatically from engagement history.</p></div></li>
+              <li class="vflow-item"><span class="vflow-dot is-accent"><span data-icon="heart"></span></span><div><h4>We miss you</h4><p>A warm message with your best recent content.</p></div></li>
+              <li class="vflow-item"><span class="vflow-dot"><span data-icon="split"></span></span><div><h4>Opened or clicked?</h4><p>Re-engaged contacts return to your active list.</p></div></li>
+              <li class="vflow-item"><span class="vflow-dot is-accent"><span data-icon="tag"></span></span><div><h4>Last-chance offer</h4><p>One more reason to stay for everyone else.</p></div></li>
+              <li class="vflow-item"><span class="vflow-dot"><span data-icon="shieldCheck"></span></span><div><h4>Sunset politely</h4><p>Protect deliverability by pausing silent contacts.</p></div></li>
+            </ol></div>
+            <figure class="pv reveal" role="img" aria-label="Win-back results: reactivated contacts rising steadily across ten weeks, ending at 23%">
+              <div class="pv-body">
+                <div class="flex items-end justify-between"><div><p class="pv-label">Reactivated contacts</p><p class="pv-num">23%</p></div><span class="badge badge-success">2.4× baseline</span></div>
+                <svg viewBox="0 0 320 130" class="mt-3 w-full h-auto" aria-hidden="true" focusable="false"><defs><linearGradient id="g-wb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--v-accent);stop-opacity:.4"/><stop offset="1" style="stop-color:var(--v-accent);stop-opacity:0"/></linearGradient></defs><g class="stroke-line" stroke-width="1"><path d="M0 30H320M0 65H320M0 100H320"/></g><path class="area" d="M0 120C40 118 70 112 110 98S180 70 220 52 290 24 320 14V130H0Z" fill="url(#g-wb)"/><path class="draw stroke-accent" pathLength="1" fill="none" stroke-width="3.5" stroke-linecap="round" d="M0 120C40 118 70 112 110 98S180 70 220 52 290 24 320 14"/></svg>
+              </div>
+            </figure>
+          </div>
+
+          <div class="tabpanel grid items-start gap-6 lg:grid-cols-2" role="tabpanel" id="p-post" aria-labelledby="t-post" hidden>
+            <div class="card"><ol class="vflow">
+              <li class="vflow-item"><span class="vflow-dot"><span data-icon="cart"></span></span><div><h4>Order placed</h4><p>Starts the moment checkout completes.</p></div></li>
+              <li class="vflow-item"><span class="vflow-dot is-accent"><span data-icon="heart"></span></span><div><h4>Thank-you and receipt</h4><p>Set delivery expectations and build trust.</p></div></li>
+              <li class="vflow-item"><span class="vflow-dot"><span data-icon="star"></span></span><div><h4>Review request · day 7</h4><p>Ask once the product has arrived.</p></div></li>
+              <li class="vflow-item"><span class="vflow-dot is-accent"><span data-icon="layers"></span></span><div><h4>Cross-sell · day 14</h4><p>Recommend items that pair with what they bought.</p></div></li>
+              <li class="vflow-item"><span class="vflow-dot"><span data-icon="repeat"></span></span><div><h4>Replenish reminder</h4><p>Perfectly timed for consumable products.</p></div></li>
+            </ol></div>
+            <figure class="pv reveal" role="img" aria-label="Post-purchase results: repeat purchases growing week over week, up 31 percent">
+              <div class="pv-body">
+                <div class="flex items-end justify-between"><div><p class="pv-label">Repeat purchases</p><p class="pv-num">+31%</p></div><span class="badge badge-success">vs. no follow-up</span></div>
+                <div class="mt-4 flex h-36 items-end gap-2" aria-hidden="true">
+                  <i class="pv-col w-full rounded-t-md bg-primary/30 h-[24%]"></i><i class="pv-col w-full rounded-t-md bg-primary/40 h-[32%]"></i><i class="pv-col w-full rounded-t-md bg-primary/55 h-[44%]"></i><i class="pv-col w-full rounded-t-md bg-primary/70 h-[58%]"></i><i class="pv-col w-full rounded-t-md bg-primary/85 h-[76%]"></i><i class="pv-col w-full rounded-t-md bg-primary h-[96%]"></i>
+                </div>
+                <div class="mt-2 flex justify-between text-small text-muted"><span>Week 1</span><span>Week 6</span></div>
+              </div>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 · Audience growth and segmentation -->
+    <section id="growth" class="section" aria-labelledby="growth-title">
+      <div class="container-v">
+        <div class="mb-12 grid items-center gap-8 lg:grid-cols-2 lg:gap-14">
+          <div class="split-text reveal">
+            <span class="eyebrow">Audience growth and segmentation</span>
+            <h2 id="growth-title">Grow a list worth sending to</h2>
+            <p class="lead">Capture contacts from every channel, then organise them into segments that keep themselves up to date.</p>
+          </div>
+          <div class="photo photo-shade reveal aspect-[16/10]" data-delay="2">
+            <img src="assets/images/public/home-2/growth-audience.jpg" alt="Group of smiling customers gathered around a laptop, joining a brand community" loading="lazy" decoding="async">
+            <div class="photo-cap"><p class="font-bold">+1,284 new subscribers this week</p></div>
+          </div>
+        </div>
+        <div class="grid gap-4 lg:grid-cols-12">
+          <article class="card reveal grid items-center gap-6 md:grid-cols-2 lg:col-span-7">
+            <div class="grid gap-3"><div class="icon-tile"><span data-icon="userPlus"></span></div><h3 class="card-title">Signup forms that convert</h3><p class="card-text">Embed popups, inline forms and landing pages. New contacts flow straight into the right journey.</p><span class="badge badge-success w-fit">12.4% average conversion</span></div>
+            <div class="paper p-5" aria-hidden="true"><p class="text-base font-extrabold">Join the weekly digest</p><p class="mt-1 text-sm text-navy-600">Fresh ideas, every Friday.</p><div class="mt-3 rounded-lg border border-navy-300 px-3 py-2 text-sm text-navy-500">you@company.com</div><div class="mt-2 rounded-full bg-indigo-600 py-2 text-center text-sm font-bold text-white">Subscribe</div></div>
+          </article>
+          <article class="card reveal grid gap-3 lg:col-span-5" data-delay="1">
+            <div class="flex items-start justify-between"><div><p class="pv-label">Subscribers</p><p class="stat-num !text-3xl">48,210</p></div><span class="badge badge-success">+24.6%</span></div>
+            <svg viewBox="0 0 300 100" class="w-full h-auto" role="img" aria-label="Subscriber growth rising over twelve months" focusable="false"><defs><linearGradient id="g-gr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--v-primary);stop-opacity:.35"/><stop offset="1" style="stop-color:var(--v-primary);stop-opacity:0"/></linearGradient></defs><path class="area" d="M0 88L25 84 50 80 75 70 100 72 125 60 150 54 175 48 200 40 225 30 250 24 275 14 300 8V100H0Z" fill="url(#g-gr)"/><path class="draw stroke-primary" pathLength="1" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M0 88L25 84 50 80 75 70 100 72 125 60 150 54 175 48 200 40 225 30 250 24 275 14 300 8"/></svg>
+          </article>
+          <article class="card reveal grid content-start gap-4 lg:col-span-5">
+            <div class="flex items-center gap-3"><div class="icon-tile is-accent"><span data-icon="filter"></span></div><h3 class="card-title !mb-0">Segments that update themselves</h3></div>
+            <div class="flex flex-wrap items-center gap-2" aria-hidden="true">
+              <span class="chip is-primary text-base">Loyal customers · 12.4k</span><span class="chip is-accent">New this month · 3.1k</span><span class="chip">Cart abandoners · 1.8k</span><span class="chip is-primary">VIP · 640</span><span class="chip">Dormant · 5.2k</span><span class="chip is-accent">Webinar guests · 920</span>
+            </div>
+          </article>
+          <article class="card reveal grid content-start gap-4 lg:col-span-7" data-delay="1">
+            <div class="flex items-center gap-3"><div class="icon-tile"><span data-icon="layers"></span></div><h3 class="card-title !mb-0">Where contacts come from</h3></div>
+            <div class="flex h-3 overflow-hidden rounded-full" role="img" aria-label="Sources: forms 48%, imports 22%, integrations 18%, referrals 12%"><i class="bg-primary" style="width:48%"></i><i class="bg-accent" style="width:22%"></i><i class="bg-indigo-300" style="width:18%"></i><i class="bg-navy-400" style="width:12%"></i></div>
+            <ul class="grid grid-cols-2 gap-3 text-small font-semibold sm:grid-cols-4"><li class="flex items-center gap-2"><i class="h-2.5 w-2.5 rounded-full bg-primary"></i>Forms 48%</li><li class="flex items-center gap-2"><i class="h-2.5 w-2.5 rounded-full bg-accent"></i>Imports 22%</li><li class="flex items-center gap-2"><i class="h-2.5 w-2.5 rounded-full bg-indigo-300"></i>Sync 18%</li><li class="flex items-center gap-2"><i class="h-2.5 w-2.5 rounded-full bg-navy-400"></i>Referrals 12%</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 · Personalization and templates -->
+    <section id="personalization" class="section section-alt" aria-labelledby="pers-title">
+      <div class="container-v">
+        <div class="split">
+          <div class="split-text reveal" data-tabs>
+            <span class="eyebrow">Personalization and templates</span>
+            <h2 id="pers-title">One template. A thousand personal emails.</h2>
+            <p class="lead">Merge fields, dynamic blocks and conditional content tailor every message — start from a polished template and make it yours.</p>
+            <div class="tablist" role="tablist" aria-label="Preview as">
+              <button class="tab" role="tab" id="t-alex" aria-controls="p-alex" aria-selected="true">Alex · Runner</button>
+              <button class="tab" role="tab" id="t-priya" aria-controls="p-priya" aria-selected="false">Priya · Home cook</button>
+              <button class="tab" role="tab" id="t-jordan" aria-controls="p-jordan" aria-selected="false">Jordan · Traveller</button>
+            </div>
+            <div class="w-full">
+              <div class="tabpanel pv-tile grid gap-3" role="tabpanel" id="p-alex" aria-labelledby="t-alex">
+                <div class="flex items-center gap-3"><span class="photo !rounded-full h-12 w-12 shrink-0"><img src="assets/images/public/home-2/persona-alex.jpg" alt="Portrait of Alex, a smiling customer who loves trail running" class="object-[50%_20%]" loading="lazy" decoding="async"></span><p class="text-small font-semibold">Previewing as Alex</p></div>
+                <p class="caption">Subject: <b class="text-fg">Alex, your trail-running picks are ready</b></p>
+                <p class="text-lg font-bold">Hi <span class="rounded bg-primary-soft px-1.5 text-primary">Alex</span>, new for the trails</p>
+                <div class="grid grid-cols-2 gap-2"><span class="chip is-primary justify-center"><span data-icon="zap"></span>Trail shoes</span><span class="chip is-accent justify-center"><span data-icon="target"></span>Race kits</span></div>
+                <p class="caption">Segment: Runners · Location: Denver</p>
+              </div>
+              <div class="tabpanel pv-tile grid gap-3" role="tabpanel" id="p-priya" aria-labelledby="t-priya" hidden>
+                <div class="flex items-center gap-3"><span class="photo !rounded-full h-12 w-12 shrink-0"><img src="assets/images/public/home-2/persona-priya.jpg" alt="Portrait of Priya, a home cook subscribed to weekly recipes" class="object-[50%_20%]" loading="lazy" decoding="async"></span><p class="text-small font-semibold">Previewing as Priya</p></div>
+                <p class="caption">Subject: <b class="text-fg">Priya, three dinners for the week ahead</b></p>
+                <p class="text-lg font-bold">Hi <span class="rounded bg-primary-soft px-1.5 text-primary">Priya</span>, what's cooking?</p>
+                <div class="grid grid-cols-2 gap-2"><span class="chip is-primary justify-center"><span data-icon="heart"></span>Weeknight meals</span><span class="chip is-accent justify-center"><span data-icon="store"></span>Pantry picks</span></div>
+                <p class="caption">Segment: Home cooks · Location: Austin</p>
+              </div>
+              <div class="tabpanel pv-tile grid gap-3" role="tabpanel" id="p-jordan" aria-labelledby="t-jordan" hidden>
+                <div class="flex items-center gap-3"><span class="photo !rounded-full h-12 w-12 shrink-0"><img src="assets/images/public/home-2/persona-jordan.jpg" alt="Portrait of Jordan, a frequent traveller browsing weekend deals" class="object-[50%_20%]" loading="lazy" decoding="async"></span><p class="text-small font-semibold">Previewing as Jordan</p></div>
+                <p class="caption">Subject: <b class="text-fg">Jordan, weekend escapes under $300</b></p>
+                <p class="text-lg font-bold">Hi <span class="rounded bg-primary-soft px-1.5 text-primary">Jordan</span>, ready to go?</p>
+                <div class="grid grid-cols-2 gap-2"><span class="chip is-primary justify-center"><span data-icon="globe"></span>City breaks</span><span class="chip is-accent justify-center"><span data-icon="calendar"></span>Flexible dates</span></div>
+                <p class="caption">Segment: Travellers · Location: Seattle</p>
+              </div>
+            </div>
+          </div>
+          <div class="stagger grid grid-cols-2 gap-4 reveal sm:grid-cols-3" data-delay="2">
+            <figure class="grid gap-2"><div class="paper aspect-[4/5]"><div class="h-5 bg-navy-900"></div><img src="assets/images/public/home-2/template-newsletter.jpg" alt="Person writing a newsletter at a laptop" class="h-16 w-full object-cover" loading="lazy" decoding="async"><div class="grid gap-1.5 p-3"><i class="h-2 w-4/5 rounded bg-navy-900"></i><i class="h-1.5 w-full rounded bg-navy-200"></i><i class="h-1.5 w-3/4 rounded bg-navy-200"></i><i class="mt-1 h-4 w-1/2 rounded-full bg-indigo-600"></i></div></div><figcaption class="text-small font-semibold">Newsletter</figcaption></figure>
+            <figure class="grid gap-2"><div class="paper aspect-[4/5] bg-indigo-50"><div class="grid place-items-center p-4"><i class="h-16 w-16 rounded-full bg-indigo-500"></i></div><div class="grid justify-items-center gap-1.5 px-3"><i class="h-2.5 w-3/4 rounded bg-navy-900"></i><i class="h-1.5 w-2/3 rounded bg-navy-300"></i><i class="mt-1 h-4 w-1/3 rounded-full bg-navy-900"></i></div></div><figcaption class="text-small font-semibold">Product launch</figcaption></figure>
+            <figure class="grid gap-2"><div class="paper aspect-[4/5] !bg-indigo-700 grid place-content-center gap-1 p-3 text-center text-white"><p class="text-3xl font-extrabold leading-none">30%</p><p class="text-xs font-bold tracking-widest">OFF TODAY</p><i class="mx-auto mt-2 h-4 w-14 rounded-full bg-aqua-400"></i></div><figcaption class="text-small font-semibold">Flash sale</figcaption></figure>
+            <figure class="grid gap-2"><div class="paper aspect-[4/5] p-3"><i class="mb-2 block h-2.5 w-1/2 rounded bg-navy-900"></i><div class="grid gap-2"><div class="flex justify-between"><i class="h-1.5 w-1/3 rounded bg-navy-300"></i><i class="h-1.5 w-1/6 rounded bg-navy-300"></i></div><div class="flex justify-between"><i class="h-1.5 w-2/5 rounded bg-navy-300"></i><i class="h-1.5 w-1/6 rounded bg-navy-300"></i></div><div class="flex justify-between"><i class="h-1.5 w-1/4 rounded bg-navy-300"></i><i class="h-1.5 w-1/6 rounded bg-navy-300"></i></div><hr class="border-navy-200"><div class="flex justify-between"><i class="h-2 w-1/4 rounded bg-navy-900"></i><i class="h-2 w-1/5 rounded bg-aqua-600"></i></div></div></div><figcaption class="text-small font-semibold">Order receipt</figcaption></figure>
+            <figure class="grid gap-2"><div class="paper aspect-[4/5] p-3"><div class="mb-2 grid h-14 place-items-center rounded-lg bg-aqua-100 text-center"><p class="text-xl font-extrabold leading-none text-aqua-900">14</p><p class="text-[10px] font-bold tracking-widest text-aqua-900">JUN</p></div><i class="mb-1.5 block h-2 w-4/5 rounded bg-navy-900"></i><i class="mb-1.5 block h-1.5 w-full rounded bg-navy-200"></i><i class="block h-4 w-1/2 rounded-full bg-indigo-600"></i></div><figcaption class="text-small font-semibold">Event invitation</figcaption></figure>
+            <figure class="grid gap-2"><div class="paper aspect-[4/5] grid grid-cols-[2fr_3fr] items-stretch"><img src="assets/images/public/home-2/template-welcome.jpg" alt="Smiling new customer in a denim jacket" class="h-full w-full object-cover" loading="lazy" decoding="async"><div class="grid content-center gap-1.5 p-2"><i class="h-2 w-full rounded bg-navy-900"></i><i class="h-1.5 w-full rounded bg-navy-200"></i><i class="h-1.5 w-2/3 rounded bg-navy-200"></i><i class="mt-1 h-3.5 w-3/5 rounded-full bg-navy-900"></i></div></div><figcaption class="text-small font-semibold">Welcome</figcaption></figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6 · Campaign creation -->
+    <section id="create" class="section" aria-labelledby="create-title">
+      <div class="container-v">
+        <div class="section-head is-center reveal">
+          <span class="eyebrow">Campaign creation</span>
+          <h2 id="create-title">From idea to inbox in four steps</h2>
+          <p class="lead">One-off campaigns are as simple as automation. Pick a step to see it in action.</p>
+        </div>
+        <div data-tabs class="grid items-center justify-center gap-10 lg:grid-cols-[minmax(0,28rem)_auto] lg:gap-20">
+          <div class="grid gap-6">
+          <div class="grid gap-2" role="tablist" aria-label="Campaign steps" aria-orientation="vertical">
+            <button class="steptab" role="tab" id="t-s1" aria-controls="p-s1" aria-selected="true"><span class="step-n">1</span><span><strong>Choose your audience</strong><span class="desc">Pick a segment or build one in seconds.</span></span></button>
+            <button class="steptab" role="tab" id="t-s2" aria-controls="p-s2" aria-selected="false"><span class="step-n">2</span><span><strong>Start from a template</strong><span class="desc">Responsive layouts that match your brand.</span></span></button>
+            <button class="steptab" role="tab" id="t-s3" aria-controls="p-s3" aria-selected="false"><span class="step-n">3</span><span><strong>Personalise and preview</strong><span class="desc">Check every version before it goes out.</span></span></button>
+            <button class="steptab" role="tab" id="t-s4" aria-controls="p-s4" aria-selected="false"><span class="step-n">4</span><span><strong>Schedule and send</strong><span class="desc">Send now or at each contact's best time.</span></span></button>
+          </div>
+          <div class="photo photo-shade aspect-[16/9] sm:aspect-[16/8]">
+            <img src="assets/images/public/home-2/create-designer.jpg" alt="Designer building a campaign on a desktop monitor with notes and a tablet nearby" loading="lazy" decoding="async">
+            <div class="photo-cap"><p class="font-bold">Created in minutes, not days</p></div>
+          </div>
+          </div>
+          <div class="phone reveal" data-delay="2">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="flex items-center gap-2 border-b border-line bg-surface px-4 py-3"><img src="assets/svg/logo-mark.svg" alt="" class="h-6 w-6"><span class="text-small font-bold">New campaign</span></div>
+              <div class="tabpanel flex-1 overflow-hidden p-4" role="tabpanel" id="p-s1" aria-labelledby="t-s1">
+                <p class="pv-label mb-2">Audience</p>
+                <div class="grid gap-2 text-small font-semibold">
+                  <div class="pv-tile flex items-center justify-between !border-primary"><span class="flex items-center gap-2"><span data-icon="check" class="text-primary"></span>High-intent buyers</span><span class="text-muted">8,214</span></div>
+                  <div class="pv-tile flex items-center justify-between"><span>Newsletter subscribers</span><span class="text-muted">48,210</span></div>
+                  <div class="pv-tile flex items-center justify-between"><span>Cart abandoners</span><span class="text-muted">1,802</span></div>
+                  <div class="pv-tile flex items-center justify-between"><span>VIP customers</span><span class="text-muted">640</span></div>
+                </div>
+                <p class="caption mt-3">Estimated reach: 8,214 contacts</p>
+              </div>
+              <div class="tabpanel flex-1 overflow-hidden p-4" role="tabpanel" id="p-s2" aria-labelledby="t-s2" hidden>
+                <p class="pv-label mb-2">Templates</p>
+                <div class="grid grid-cols-2 gap-2">
+                  <div class="paper aspect-[4/5] ring-2 ring-primary"><div class="h-4 bg-navy-900"></div><div class="h-12 bg-gradient-to-br from-indigo-300 to-aqua-300"></div><div class="grid gap-1 p-2"><i class="h-1.5 w-4/5 rounded bg-navy-900"></i><i class="h-1 w-full rounded bg-navy-200"></i></div></div>
+                  <div class="paper aspect-[4/5] bg-indigo-50"><div class="grid place-items-center p-3"><i class="h-10 w-10 rounded-full bg-indigo-500"></i></div><div class="grid justify-items-center gap-1 px-2"><i class="h-1.5 w-3/4 rounded bg-navy-900"></i><i class="h-3 w-1/3 rounded-full bg-navy-900"></i></div></div>
+                  <div class="paper aspect-[4/5] !bg-indigo-700 grid place-content-center text-center text-white"><p class="text-xl font-extrabold">30%</p><p class="text-[10px] font-bold tracking-widest">OFF</p></div>
+                  <div class="paper aspect-[4/5] p-2"><i class="mb-2 block h-8 rounded bg-aqua-100"></i><i class="mb-1 block h-1.5 w-4/5 rounded bg-navy-900"></i><i class="block h-1 w-full rounded bg-navy-200"></i></div>
+                </div>
+              </div>
+              <div class="tabpanel flex-1 overflow-hidden p-4" role="tabpanel" id="p-s3" aria-labelledby="t-s3" hidden>
+                <div class="mb-2 flex items-center justify-between"><p class="pv-label">Preview as</p><span class="chip is-primary">Alex</span></div>
+                <div class="paper">
+                  <div class="h-14 bg-gradient-to-br from-indigo-300 to-aqua-300"></div>
+                  <div class="grid gap-1.5 p-3"><p class="text-sm font-extrabold">Hi <span class="rounded bg-indigo-100 px-1 text-indigo-800">Alex</span>, your picks are ready</p><i class="h-1.5 w-full rounded bg-navy-200"></i><i class="h-1.5 w-4/5 rounded bg-navy-200"></i><i class="mt-1 h-4 w-2/5 rounded-full bg-navy-900"></i></div>
+                </div>
+                <p class="caption mt-3 flex items-center gap-2"><span data-icon="shieldCheck" class="text-accent-text"></span>Links, images and spam score checked</p>
+              </div>
+              <div class="tabpanel flex-1 overflow-hidden p-4" role="tabpanel" id="p-s4" aria-labelledby="t-s4" hidden>
+                <p class="pv-label mb-2">Schedule</p>
+                <div class="pv-tile grid gap-2 text-small font-semibold"><span class="flex items-center gap-2"><span data-icon="calendar" class="text-primary"></span>Tuesday, 10:15</span><span class="flex items-center gap-2"><span data-icon="clock" class="text-primary"></span>Optimised for each contact</span></div>
+                <div class="mt-3 grid grid-cols-7 gap-1 text-center text-xs font-semibold text-muted"><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span><i class="rounded bg-surface-2 py-2 not-italic">1</i><i class="rounded bg-primary py-2 not-italic text-on-primary">2</i><i class="rounded bg-surface-2 py-2 not-italic">3</i><i class="rounded bg-surface-2 py-2 not-italic">4</i><i class="rounded bg-surface-2 py-2 not-italic">5</i><i class="rounded bg-surface-2 py-2 not-italic">6</i><i class="rounded bg-surface-2 py-2 not-italic">7</i></div>
+                <span class="btn btn-primary btn-block mt-4">Schedule campaign</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7 · Analytics and optimization -->
+    <section id="optimization" class="section section-alt" aria-labelledby="opt-title">
+      <div class="container-v">
+        <div class="section-head is-center reveal">
+          <span class="eyebrow">Analytics and optimization</span>
+          <h2 id="opt-title">Every send teaches the next one</h2>
+          <p class="lead">Test, learn and tune automatically — with reports that connect engagement to revenue.</p>
+        </div>
+        <div class="grid gap-4 lg:grid-cols-12">
+          <div class="pv reveal lg:col-span-5 lg:row-span-2">
+            <div class="photo !rounded-none aspect-[16/8]">
+              <img src="assets/images/public/home-2/optimize-review.jpg" alt="Marketing managers reviewing performance charts together in a meeting" loading="lazy" decoding="async">
+            </div>
+            <div role="img" aria-label="A/B test: subject B wins with 52% opens against 41% for subject A at 96% confidence">
+            <div class="pv-bar"><span class="pv-title">A/B test · Subject line</span><span class="ms-auto badge badge-success">Winner: B</span></div>
+            <div class="pv-body grid gap-5">
+              <div><div class="mb-2 flex justify-between text-small font-semibold"><span>A · “Spring is here”</span><span>41%</span></div><span class="pv-track block !h-4"><i class="pv-fill" style="width:41%;background:var(--v-border-strong)"></i></span></div>
+              <div><div class="mb-2 flex justify-between text-small font-semibold"><span>B · “Alex, your picks are ready”</span><span>52%</span></div><span class="pv-track block !h-4"><i class="pv-fill is-accent" style="width:52%"></i></span></div>
+              <div class="grid grid-cols-2 gap-3"><div class="pv-tile"><p class="pv-label">Lift</p><p class="pv-num">+26.8%</p></div><div class="pv-tile"><p class="pv-label">Confidence</p><p class="pv-num">96%</p></div></div>
+              <p class="flex items-center gap-2 text-small text-muted"><span data-icon="sparkles" class="text-accent-text"></span>Winner sent automatically to the remaining 80%.</p>
+              <div class="pv-tile !py-1">
+                <p class="pv-label pt-2">Recent tests</p>
+                <div class="pv-row"><span data-icon="check" class="text-success"></span><span class="grow font-semibold">Preheader wording</span><span class="pv-up">+9%</span></div>
+                <div class="pv-row"><span data-icon="check" class="text-success"></span><span class="grow font-semibold">Send time</span><span class="pv-up">+14%</span></div>
+                <div class="pv-row"><span data-icon="check" class="text-success"></span><span class="grow font-semibold">Button colour</span><span class="pv-up">+6%</span></div>
+              </div>
+            </div>
+          </div>
+          </div>
+          <figure class="pv reveal lg:col-span-7" role="img" aria-label="Send-time heatmap showing opens peak on weekday mornings and early evenings">
+            <div class="pv-bar"><span class="pv-title">Best time to send · opens by day and hour</span></div>
+            <div class="pv-body">
+              <div class="grid grid-cols-[2rem_1fr] gap-2 text-xs font-semibold text-muted">
+                <div class="grid content-around"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div>
+                <div class="heat text-primary" data-heatmap="7" style="color:var(--v-primary)"></div>
+              </div>
+              <div class="mt-2 flex justify-between ps-10 text-xs font-semibold text-muted"><span>6am</span><span>12pm</span><span>6pm</span></div>
+            </div>
+          </figure>
+          <figure class="pv reveal lg:col-span-4" role="img" aria-label="Revenue attribution: campaigns 46%, automations 38%, forms 16%">
+            <div class="pv-body grid gap-3">
+              <div><p class="pv-label">Revenue attributed</p><p class="pv-num">$84.2k</p></div>
+              <div class="flex h-3 overflow-hidden rounded-full"><i class="bg-primary" style="width:46%"></i><i class="bg-accent" style="width:38%"></i><i class="bg-indigo-300" style="width:16%"></i></div>
+              <ul class="grid gap-1 text-small font-semibold"><li class="flex items-center gap-2"><i class="h-2.5 w-2.5 rounded-full bg-primary"></i>Campaigns 46%</li><li class="flex items-center gap-2"><i class="h-2.5 w-2.5 rounded-full bg-accent"></i>Automations 38%</li><li class="flex items-center gap-2"><i class="h-2.5 w-2.5 rounded-full bg-indigo-300"></i>Forms 16%</li></ul>
+            </div>
+          </figure>
+          <figure class="pv reveal lg:col-span-3" role="img" aria-label="Deliverability: 98.6 percent inbox placement with SPF, DKIM and DMARC passing">
+            <div class="pv-body grid justify-items-center gap-3 text-center">
+              <svg viewBox="0 0 120 70" class="w-32" aria-hidden="true" focusable="false"><path d="M10 62A50 50 0 0 1 110 62" fill="none" class="stroke-surface-2" stroke-width="12" stroke-linecap="round"/><path class="draw stroke-accent" pathLength="1" d="M10 62A50 50 0 0 1 110 62" fill="none" stroke-width="12" stroke-linecap="round" style="stroke-dasharray:1;stroke-dashoffset:.014"/></svg>
+              <p class="pv-num -mt-8">98.6%</p><p class="pv-label">Inbox placement</p>
+              <div class="flex flex-wrap justify-center gap-1.5"><span class="chip is-accent">SPF</span><span class="chip is-accent">DKIM</span><span class="chip is-accent">DMARC</span></div>
+            </div>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8 · Integrations and use cases -->
+    <section id="integrations" class="section band-dark scope-dark" aria-labelledby="int-title">
+      <div class="container-v">
+        <div class="split">
+          <div class="reveal" role="img" aria-label="VELORA connected to stores, databases, payments, developer tools, chat, calendars, links, web, retail and business apps">
+            <div class="orbit">
+              <span class="orbit-ring r1"></span><span class="orbit-ring r2"></span>
+              <div class="orbit-spin">
+                <span class="orbit-item" style="--a:45deg"><span class="tile"><span data-icon="cart"></span></span></span>
+                <span class="orbit-item" style="--a:135deg"><span class="tile"><span data-icon="database"></span></span></span>
+                <span class="orbit-item" style="--a:225deg"><span class="tile"><span data-icon="dollar"></span></span></span>
+                <span class="orbit-item" style="--a:315deg"><span class="tile"><span data-icon="code"></span></span></span>
+              </div>
+              <div class="orbit-spin is-reverse">
+                <span class="orbit-item" style="--a:0deg"><span class="tile"><span data-icon="message"></span></span></span>
+                <span class="orbit-item" style="--a:60deg"><span class="tile"><span data-icon="calendar"></span></span></span>
+                <span class="orbit-item" style="--a:120deg"><span class="tile"><span data-icon="link"></span></span></span>
+                <span class="orbit-item" style="--a:180deg"><span class="tile"><span data-icon="globe"></span></span></span>
+                <span class="orbit-item" style="--a:240deg"><span class="tile"><span data-icon="store"></span></span></span>
+                <span class="orbit-item" style="--a:300deg"><span class="tile"><span data-icon="briefcase"></span></span></span>
+              </div>
+              <span class="orbit-core"><img class="logo-mark" src="assets/svg/logo-mark.svg" alt=""></span>
+            </div>
+          </div>
+          <div class="split-text reveal" data-delay="1">
+            <span class="eyebrow">Integrations</span>
+            <h2 id="int-title">Connect the tools you already use</h2>
+            <p class="lead">Sync customers, orders and events from your stack, and send data back out through webhooks and a full API.</p>
+            <ul class="flex flex-wrap gap-2"><li class="chip"><span data-icon="cart" class="text-primary"></span>Stores</li><li class="chip"><span data-icon="database" class="text-primary"></span>CRMs</li><li class="chip"><span data-icon="dollar" class="text-primary"></span>Payments</li><li class="chip"><span data-icon="message" class="text-primary"></span>Support</li><li class="chip"><span data-icon="calendar" class="text-primary"></span>Events</li><li class="chip"><span data-icon="code" class="text-primary"></span>API &amp; webhooks</li></ul>
+          </div>
+        </div>
+
+        <div class="section-head is-center reveal !mt-16 !mb-8"><span class="eyebrow">Use cases</span><h3 class="h2">Built for how you grow</h3></div>
+        <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-5">
+          <article class="card card-hover reveal grid content-start overflow-hidden !p-0"><div class="photo !rounded-none aspect-[16/10]"><img src="assets/images/public/home-2/usecase-ecommerce.jpg" alt="Shop owner taking a contactless payment from a customer at the counter" loading="lazy" decoding="async"></div><div class="grid content-start gap-3 p-5"><div class="icon-tile"><span data-icon="store"></span></div><h4 class="card-title !mb-0">E-commerce</h4><p class="card-text">Recover carts, launch drops and reward repeat buyers.</p><span class="chip is-accent w-fit">+27% repeat orders</span></div></article>
+          <article class="card card-hover reveal grid content-start overflow-hidden !p-0" data-delay="1"><div class="photo !rounded-none aspect-[16/10]"><img src="assets/images/public/home-2/usecase-saas.jpg" alt="Laptop on a desk showing the code of a software product" loading="lazy" decoding="async"></div><div class="grid content-start gap-3 p-5"><div class="icon-tile is-accent"><span data-icon="code"></span></div><h4 class="card-title !mb-0">SaaS</h4><p class="card-text">Onboard trials, announce releases and prevent churn.</p><span class="chip is-accent w-fit">+34% activation</span></div></article>
+          <article class="card card-hover reveal grid content-start overflow-hidden !p-0" data-delay="2"><div class="photo !rounded-none aspect-[16/10]"><img src="assets/images/public/home-2/usecase-agency.jpg" alt="Agency team discussing ideas in front of a whiteboard of sticky notes" loading="lazy" decoding="async"></div><div class="grid content-start gap-3 p-5"><div class="icon-tile"><span data-icon="briefcase"></span></div><h4 class="card-title !mb-0">Agencies</h4><p class="card-text">Run every client in a separate, branded workspace.</p><span class="chip is-accent w-fit">Unlimited workspaces</span></div></article>
+          <article class="card card-hover reveal grid content-start overflow-hidden !p-0" data-delay="3"><div class="photo !rounded-none aspect-[16/10]"><img src="assets/images/public/home-2/usecase-creators.jpg" alt="Creative professional smiling while working on a laptop in a studio" loading="lazy" decoding="async"></div><div class="grid content-start gap-3 p-5"><div class="icon-tile is-accent"><span data-icon="sparkles"></span></div><h4 class="card-title !mb-0">Creators</h4><p class="card-text">Grow a loyal readership and monetise your newsletter.</p><span class="chip is-accent w-fit">3× faster growth</span></div></article>
+          <article class="card card-hover reveal grid content-start overflow-hidden !p-0" data-delay="4"><div class="photo !rounded-none aspect-[16/10]"><img src="assets/images/public/home-2/usecase-nonprofit.jpg" alt="Community members talking together over coffee" loading="lazy" decoding="async"></div><div class="grid content-start gap-3 p-5"><div class="icon-tile"><span data-icon="heart"></span></div><h4 class="card-title !mb-0">Nonprofits</h4><p class="card-text">Thank donors, share impact and inspire recurring gifts.</p><span class="chip is-accent w-fit">+19% donor retention</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9 · Pricing / value proposition -->
+    <section id="pricing" class="section" aria-labelledby="value-title">
+      <div class="container-v">
+        <div class="split is-wide-visual">
+          <div class="split-text reveal">
+            <span class="eyebrow">Pricing and value</span>
+            <h2 id="value-title">Everything included. Pay only for the size of your list.</h2>
+            <p class="lead">No feature gates on the tools that matter. Every plan ships with automation, segmentation, testing and reporting.</p>
+            <ul class="grid gap-3 sm:grid-cols-2">
+              <li class="chip !rounded-xl !px-3 !py-2.5 justify-start"><span data-icon="workflow" class="text-primary"></span>Visual automation</li>
+              <li class="chip !rounded-xl !px-3 !py-2.5 justify-start"><span data-icon="filter" class="text-primary"></span>Behaviour segments</li>
+              <li class="chip !rounded-xl !px-3 !py-2.5 justify-start"><span data-icon="template" class="text-primary"></span>Template library</li>
+              <li class="chip !rounded-xl !px-3 !py-2.5 justify-start"><span data-icon="split" class="text-primary"></span>A/B testing</li>
+              <li class="chip !rounded-xl !px-3 !py-2.5 justify-start"><span data-icon="chart" class="text-primary"></span>Revenue reports</li>
+              <li class="chip !rounded-xl !px-3 !py-2.5 justify-start"><span data-icon="plug" class="text-primary"></span>Integrations and API</li>
+              <li class="chip !rounded-xl !px-3 !py-2.5 justify-start"><span data-icon="database" class="text-primary"></span>Free migration</li>
+              <li class="chip !rounded-xl !px-3 !py-2.5 justify-start"><span data-icon="message" class="text-primary"></span>Human support</li>
+            </ul>
+            <div class="photo photo-shade aspect-[16/8] w-full">
+              <img src="assets/images/public/home-2/value-agreement.jpg" alt="Two professionals shaking hands to confirm a simple, transparent agreement" loading="lazy" decoding="async">
+              <div class="photo-cap"><p class="font-bold">No contracts. Cancel anytime.</p></div>
+            </div>
+          </div>
+          <div class="pv reveal" data-calc data-billing data-delay="2">
+            <div class="pv-bar"><span class="pv-title">Plan estimator</span></div>
+            <div class="pv-body grid gap-6">
+              <div>
+                <div class="mb-3 flex items-end justify-between gap-3"><label class="label" for="calc-range">How many contacts do you have?</label><p class="pv-num"><span data-calc-contacts>5,000</span></p></div>
+                <input class="range" id="calc-range" type="range" min="0" max="6" step="1" value="2" data-calc-range>
+                <div class="mt-2 flex justify-between text-xs font-semibold text-muted"><span>1k</span><span>10k</span><span>100k</span></div>
+              </div>
+              <div class="grid grid-cols-2 gap-3">
+                <div class="pv-tile"><p class="pv-label">Recommended plan</p><p class="pv-num" data-calc-plan>Growth</p></div>
+                <div class="pv-tile"><p class="pv-label">Emails per month</p><p class="pv-num" data-calc-emails>50,000</p></div>
+              </div>
+              <div class="flex flex-wrap items-center justify-between gap-4 rounded-xl bg-primary-soft p-4">
+                <div><p class="pv-label">Estimated price</p><p class="stat-num"><span data-calc-price>$59</span><span class="text-base font-semibold text-muted"> / month</span></p><p class="caption mt-1" data-calc-note>Billed monthly</p></div>
+                <label class="check-label"><input class="switch" type="checkbox" role="switch" data-calc-yearly> Yearly · save 20%</label>
+              </div>
+              <div class="cta-group"><a class="btn btn-primary btn-lg" href="signup.html">Get Started</a><a class="btn btn-outline btn-lg" href="pricing.html">Compare plans</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10 · Conversion CTA -->
+    <section class="section band-dark scope-dark" aria-labelledby="cta-title">
+      <div class="container-v">
+        <div class="split">
+          <div class="split-text reveal">
+            <h2 id="cta-title">Your next best campaign is already on its way.</h2>
+            <p class="lead">Start free for 14 days, connect your tools and launch your first automated journey today.</p>
+            <div class="cta-group"><a class="btn btn-primary btn-lg" href="signup.html">Get Started <span data-icon="arrowRight"></span></a><a class="btn btn-outline btn-lg" href="contact.html">Talk to our team</a></div>
+          </div>
+          <div class="photo is-framed relative mx-auto h-[26rem] w-full max-w-lg reveal" data-delay="2">
+            <img src="assets/images/public/home-2/cta-celebrate.jpg" alt="Colleagues giving each other a high five at a desk after a successful campaign launch" loading="lazy" decoding="async">
+            <div class="absolute inset-0 bg-gradient-to-t from-navy-950/80 to-transparent"></div>
+            <div class="card card-glass float absolute start-3 top-3 w-[54%] !p-3"><p class="pv-label">Journey</p><p class="flex items-center gap-2 font-bold"><span class="pulse-dot"></span>Welcome and convert</p><p class="caption">1,284 contacts in flow</p></div>
+            <div class="card card-glass float is-late absolute end-3 bottom-3 w-[44%] !p-3"><p class="pv-label">Open rate</p><p class="pv-num">62% <span class="pv-up">+18%</span></p></div>
+            <div class="card card-glass float absolute bottom-3 start-3 w-[50%] !p-3"><p class="pv-label">Revenue this week</p><p class="pv-num">$12,480</p><span class="pv-track mt-2 block"><i class="pv-fill is-accent" style="width:78%"></i></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div data-component="footer"></div>
+</body>
+</html>

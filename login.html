@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-base="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Log in or create an account — VELORA</title>
+  <meta name="description" content="Log in to your VELORA workspace or create a new account.">
+  <meta name="theme-color" content="#101D38">
+  <meta name="robots" content="noindex">
+  <script>(function(){var r=document.documentElement;r.classList.add('js');try{var t=localStorage.getItem('velora-theme'),d=localStorage.getItem('velora-dir');r.dataset.theme=t||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');if(d==='rtl'||d==='ltr')r.dir=d;}catch(e){r.dataset.theme='light';}})();</script>
+  <link rel="icon" type="image/svg+xml" href="assets/svg/logo-mark.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="assets/css/velora.css">
+  <script type="module" src="src/js/auth.js"></script>
+</head>
+<body>
+  <div class="auth">
+
+    <!-- Brand and product visual -->
+    <aside class="auth-visual" aria-label="About VELORA">
+      <img class="bg" src="assets/images/public/auth/auth-visual.jpg" alt="Laptop on a sofa showing an email marketing analytics dashboard with charts and audience metrics" decoding="async">
+      <a class="logo" href="index.html" aria-label="VELORA home"><img class="logo-mark" src="assets/svg/logo-mark.svg" alt=""><span class="logo-word">VELORA</span></a>
+      <div class="grid max-w-xl gap-6">
+        <div class="grid gap-3">
+          <h2>Make every message matter.</h2>
+          <p>Campaigns, contacts, automation and reporting in one calm workspace.</p>
+        </div>
+        <div class="grid max-w-md grid-cols-3 gap-3">
+          <div class="auth-stat"><b>98.4%</b><span>Delivered</span></div>
+          <div class="auth-stat"><b>46.2%</b><span>Open rate</span></div>
+          <div class="auth-stat"><b>+31%</b><span>Revenue</span></div>
+        </div>
+      </div>
+      <p class="text-small">Trusted by marketing teams in 150+ countries.</p>
+    </aside>
+
+    <!-- Forms -->
+    <div class="auth-panel">
+      <div class="auth-bar">
+        <a class="logo lg:invisible" href="index.html" aria-label="VELORA home"><img class="logo-mark" src="assets/svg/logo-mark.svg" alt=""><span class="logo-word">VELORA</span></a>
+        <div class="flex items-center gap-2">
+          <button type="button" class="btn-icon theme-toggle" data-theme-toggle aria-pressed="false" aria-label="Switch to dark theme"><span data-icon="sun" class="icon-sun"></span><span data-icon="moon" class="icon-moon"></span></button>
+          <div class="segmented" role="group" aria-label="Text direction"><button type="button" data-dir-set="ltr" aria-pressed="true">LTR</button><button type="button" data-dir-set="rtl" aria-pressed="false">RTL</button></div>
+        </div>
+      </div>
+
+      <main id="main" class="auth-main">
+        <div class="auth-card">
+
+          <!-- Log in -->
+          <section class="auth-view" data-view="login" id="view-login" aria-labelledby="login-title">
+            <div class="auth-tabs" role="tablist" aria-label="Authentication">
+              <button type="button" role="tab" data-go="login" aria-selected="true" aria-controls="view-login">Log in</button>
+              <button type="button" role="tab" data-go="signup" aria-selected="false" aria-controls="view-signup">Create account</button>
+            </div>
+            <div><h1 id="login-title" tabindex="-1">Welcome back</h1><p class="mt-1 text-muted">Log in to your VELORA workspace.</p></div>
+            <div class="auth-success" data-success role="status" hidden>
+              <span class="icon-tile is-accent"><span data-icon="check"></span></span>
+              <p class="font-bold" data-success-text>Signed in.</p>
+            </div>
+            <div class="grid gap-5" data-form-wrap>
+              <button class="btn btn-google btn-lg btn-block" type="button" data-google><span data-icon="google"></span>Continue with Google</button>
+              <div class="or-rule">or log in with email</div>
+              <form class="grid gap-4" data-form="login" novalidate>
+                <div class="form-alert" data-alert role="alert" hidden></div>
+                <div class="field">
+                  <label class="label" for="l-email">Email</label>
+                  <input class="input" id="l-email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required aria-describedby="l-email-err" aria-invalid="false">
+                  <p class="error-text" id="l-email-err"></p>
+                </div>
+                <div class="field">
+                  <label class="label" for="l-password">Password</label>
+                  <div class="pw-wrap">
+                    <input class="input" id="l-password" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required aria-describedby="l-password-err" aria-invalid="false">
+                    <button class="pw-toggle" type="button" data-pw-toggle="l-password" aria-label="Show password" aria-pressed="false"><span data-icon="eye"></span></button>
+                  </div>
+                  <p class="error-text" id="l-password-err"></p>
+                </div>
+                <div class="flex flex-wrap items-center justify-between gap-3">
+                  <label class="check-label"><input class="checkbox" type="checkbox" name="remember" id="l-remember"> Remember me</label>
+                  <button class="link" type="button" data-go="forgot">Forgot password?</button>
+                </div>
+                <button class="btn btn-primary btn-lg btn-block" type="submit"><span data-label>Log in</span></button>
+              </form>
+              <p class="auth-note"><span data-icon="info"></span><span>Sign-in is simulated in this build: any valid email and an 8+ character password opens your workspace. Nothing is sent to a server.</span></p>
+              <p class="text-center text-small text-muted">New to VELORA? <button class="link" type="button" data-go="signup">Create an account</button></p>
+            </div>
+          </section>
+
+          <!-- Create account -->
+          <section class="auth-view" data-view="signup" id="view-signup" aria-labelledby="signup-title" hidden>
+            <div class="auth-tabs" role="tablist" aria-label="Authentication">
+              <button type="button" role="tab" data-go="login" aria-selected="false" aria-controls="view-login">Log in</button>
+              <button type="button" role="tab" data-go="signup" aria-selected="true" aria-controls="view-signup">Create account</button>
+            </div>
+            <div><h1 id="signup-title" tabindex="-1">Create your account</h1><p class="mt-1 text-muted">Start your 14-day free trial. No credit card needed.</p></div>
+            <div class="auth-success" data-success role="status" hidden>
+              <span class="icon-tile is-accent"><span data-icon="check"></span></span>
+              <p class="font-bold" data-success-text>Account created.</p>
+            </div>
+            <div class="grid gap-5" data-form-wrap>
+              <button class="btn btn-google btn-lg btn-block" type="button" data-google><span data-icon="google"></span>Sign up with Google</button>
+              <div class="or-rule">or sign up with email</div>
+              <form class="grid gap-4" data-form="signup" novalidate>
+                <div class="form-alert" data-alert role="alert" hidden></div>
+                <div class="field">
+                  <label class="label" for="s-name">Full name</label>
+                  <input class="input" id="s-name" name="name" type="text" autocomplete="name" placeholder="Priya Raman" required aria-describedby="s-name-err" aria-invalid="false">
+                  <p class="error-text" id="s-name-err"></p>
+                </div>
+                <div class="field">
+                  <label class="label" for="s-email">Work email</label>
+                  <input class="input" id="s-email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required aria-describedby="s-email-err" aria-invalid="false">
+                  <p class="error-text" id="s-email-err"></p>
+                </div>
+                <div class="field">
+                  <label class="label" for="s-password">Password</label>
+                  <div class="pw-wrap">
+                    <input class="input" id="s-password" name="password" type="password" autocomplete="new-password" placeholder="Create a password" required data-strength="s-strength" aria-describedby="s-password-err s-strength" aria-invalid="false">
+                    <button class="pw-toggle" type="button" data-pw-toggle="s-password" aria-label="Show password" aria-pressed="false"><span data-icon="eye"></span></button>
+                  </div>
+                  <p class="error-text" id="s-password-err"></p>
+                  <div class="strength" id="s-strength" data-level="0" aria-live="polite">
+                    <div class="strength-bars" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+                    <p class="caption">Password strength: <strong data-strength-label>Enter a password</strong></p>
+                    <ul class="strength-rules"><li data-rule="len">8+ characters</li><li data-rule="case">Upper and lower case</li><li data-rule="num">A number</li><li data-rule="sym">A symbol</li></ul>
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label" for="s-confirm">Confirm password</label>
+                  <div class="pw-wrap">
+                    <input class="input" id="s-confirm" name="confirm" type="password" autocomplete="new-password" placeholder="Repeat your password" required data-match="s-password" aria-describedby="s-confirm-err" aria-invalid="false">
+                    <button class="pw-toggle" type="button" data-pw-toggle="s-confirm" aria-label="Show password" aria-pressed="false"><span data-icon="eye"></span></button>
+                  </div>
+                  <p class="error-text" id="s-confirm-err"></p>
+                </div>
+                <div class="field">
+                  <label class="check-label items-start"><input class="checkbox mt-0.5" id="s-terms" name="terms" type="checkbox" required aria-describedby="s-terms-err" aria-invalid="false"><span>I agree to the Terms of Service and Privacy Policy.</span></label>
+                  <p class="error-text" id="s-terms-err"></p>
+                </div>
+                <button class="btn btn-primary btn-lg btn-block" type="submit"><span data-label>Create account</span></button>
+              </form>
+              <p class="text-center text-small text-muted">Already have an account? <button class="link" type="button" data-go="login">Log in</button></p>
+            </div>
+          </section>
+
+          <!-- Forgot password -->
+          <section class="auth-view" data-view="forgot" id="view-forgot" aria-labelledby="forgot-title" hidden>
+            <button class="link inline-flex items-center gap-1 justify-self-start" type="button" data-go="login"><span data-icon="chevronLeft"></span>Back to log in</button>
+            <div><h1 id="forgot-title" tabindex="-1">Reset your password</h1><p class="mt-1 text-muted">Enter your email and we will send a link to choose a new password.</p></div>
+            <div class="auth-success" data-success role="status" hidden>
+              <span class="icon-tile is-accent"><span data-icon="mail"></span></span>
+              <p class="font-bold">Check your inbox.</p>
+              <p class="text-small">If an account exists for <strong data-success-email>your email</strong>, a reset link is on its way. Email delivery is simulated in this build, so use the button below to continue.</p>
+              <button class="btn btn-primary" type="button" data-go="reset">Open reset link</button>
+            </div>
+            <form class="grid gap-4" data-form="forgot" novalidate>
+              <div class="form-alert" data-alert role="alert" hidden></div>
+              <div class="field">
+                <label class="label" for="f-email">Email</label>
+                <input class="input" id="f-email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required aria-describedby="f-email-err" aria-invalid="false">
+                <p class="error-text" id="f-email-err"></p>
+              </div>
+              <button class="btn btn-primary btn-lg btn-block" type="submit"><span data-label>Send reset link</span></button>
+            </form>
+          </section>
+
+          <!-- Reset password -->
+          <section class="auth-view" data-view="reset" id="view-reset" aria-labelledby="reset-title" hidden>
+            <div><h1 id="reset-title" tabindex="-1">Choose a new password</h1><p class="mt-1 text-muted">Use at least 8 characters with upper and lower case letters and a number.</p></div>
+            <div class="auth-success" data-success role="status" hidden>
+              <span class="icon-tile is-accent"><span data-icon="check"></span></span>
+              <p class="font-bold">Password updated.</p>
+              <p class="text-small">You can now log in with your new password.</p>
+              <button class="btn btn-primary" type="button" data-go="login">Go to log in</button>
+            </div>
+            <form class="grid gap-4" data-form="reset" novalidate>
+              <div class="form-alert" data-alert role="alert" hidden></div>
+              <div class="field">
+                <label class="label" for="r-password">New password</label>
+                <div class="pw-wrap">
+                  <input class="input" id="r-password" name="password" type="password" autocomplete="new-password" placeholder="New password" required data-strength="r-strength" aria-describedby="r-password-err r-strength" aria-invalid="false">
+                  <button class="pw-toggle" type="button" data-pw-toggle="r-password" aria-label="Show password" aria-pressed="false"><span data-icon="eye"></span></button>
+                </div>
+                <p class="error-text" id="r-password-err"></p>
+                <div class="strength" id="r-strength" data-level="0" aria-live="polite">
+                  <div class="strength-bars" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+                  <p class="caption">Password strength: <strong data-strength-label>Enter a password</strong></p>
+                  <ul class="strength-rules"><li data-rule="len">8+ characters</li><li data-rule="case">Upper and lower case</li><li data-rule="num">A number</li><li data-rule="sym">A symbol</li></ul>
+                </div>
+              </div>
+              <div class="field">
+                <label class="label" for="r-confirm">Confirm new password</label>
+                <div class="pw-wrap">
+                  <input class="input" id="r-confirm" name="confirm" type="password" autocomplete="new-password" placeholder="Repeat the new password" required data-match="r-password" aria-describedby="r-confirm-err" aria-invalid="false">
+                  <button class="pw-toggle" type="button" data-pw-toggle="r-confirm" aria-label="Show password" aria-pressed="false"><span data-icon="eye"></span></button>
+                </div>
+                <p class="error-text" id="r-confirm-err"></p>
+              </div>
+              <button class="btn btn-primary btn-lg btn-block" type="submit"><span data-label>Update password</span></button>
+            </form>
+          </section>
+
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

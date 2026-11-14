@@ -1,0 +1,14 @@
+{
+  "name": "velora",
+  "version": "0.1.0",
+  "private": true,
+  "description": "VELORA – Email Marketing & Automation SaaS. Make Every Message Matter.",
+  "scripts": {
+    "dev": "tailwindcss -i ./src/css/main.css -o ./assets/css/velora.css --watch",
+    "build": "tailwindcss -i ./src/css/main.css -o ./assets/css/velora.css --minify"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.5",
+    "tailwindcss": "^4.3.5"
+  }
+}

@@ -1,0 +1,61 @@
+/* Pricing and Contact page patterns: FAQ accordion, comparison table, plan tiles, map, form feedback, hero shapes. */
+
+/* ---------- Hero photo shapes ---------- */
+.shape-arch { border-radius: 999px 999px var(--radius-xl) var(--radius-xl); }
+.shape-leaf { border-start-start-radius: var(--radius-xl); border-end-start-radius: var(--radius-xl); border-end-end-radius: var(--radius-xl); border-start-end-radius: 6rem; }
+
+/* ---------- FAQ accordion (native <details>) ---------- */
+.faq-list { display: grid; gap: 0.75rem; }
+.faq { border: 1px solid var(--v-border); border-radius: var(--radius-lg); background: var(--v-surface); transition: border-color var(--v-dur-fast), box-shadow var(--v-dur-fast); }
+.faq[open] { border-color: var(--v-primary); box-shadow: var(--v-shadow-sm); }
+.faq > summary { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1rem 1.25rem; font-weight: 700; cursor: pointer; list-style: none; text-align: start; }
+.faq > summary::-webkit-details-marker { display: none; }
+.faq > summary .chev { width: 1.25rem; height: 1.25rem; flex-shrink: 0; color: var(--v-primary); transition: transform var(--v-dur) var(--v-ease-out); }
+.faq[open] > summary .chev { transform: rotate(180deg); }
+.faq > p { padding: 0 1.25rem 1.25rem; color: var(--v-muted); text-align: start; }
+
+/* ---------- Plan comparison table ---------- */
+.compare-wrap { overflow: hidden; border: 1px solid var(--v-border); border-radius: var(--radius-xl); background: var(--v-surface); box-shadow: var(--v-shadow-sm); }
+.compare { width: 100%; border-collapse: collapse; font-size: 0.9375rem; }
+.compare th, .compare td { padding: 0.875rem 1rem; text-align: center; border-bottom: 1px solid var(--v-border); }
+.compare thead th { position: sticky; top: var(--v-header-h); z-index: 1; background: var(--v-surface-2); font-weight: 800; }
+.compare tbody th[scope="row"] { width: 28%; text-align: start; font-weight: 600; }
+.compare tr.group th { background: var(--v-surface-2); text-align: start; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--v-muted); }
+.compare .is-featured { background: color-mix(in srgb, var(--v-primary) 8%, var(--v-surface)); }
+.compare thead th.is-featured { color: var(--v-primary); }
+.compare td svg { display: inline-block; width: 1.25rem; height: 1.25rem; vertical-align: middle; }
+.compare tbody tr:last-child > * { border-bottom: 0; }
+@media (max-width: 767.98px) {
+  .compare thead { display: none; }
+  .compare, .compare tbody, .compare tr, .compare th, .compare td { display: block; width: 100%; }
+  .compare tbody th[scope="row"] { width: 100%; padding-bottom: 0.25rem; border-bottom: 0; background: var(--v-surface); }
+  .compare td { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.4rem 1rem; border-bottom: 0; text-align: end; }
+  .compare td::before { content: attr(data-label); font-weight: 600; color: var(--v-muted); text-align: start; }
+  .compare tr:not(.group) { padding-bottom: 0.5rem; border-bottom: 1px solid var(--v-border); }
+  .compare tr.group th { padding: 0.5rem 1rem; }
+}
+
+/* ---------- Calculator plan tiles ---------- */
+.plan-tile { padding: 0.5rem 0.25rem; border: 1px solid var(--v-border); border-radius: var(--radius-md); background: var(--v-surface); text-align: center; font-size: 0.8125rem; font-weight: 700; color: var(--v-muted); transition: border-color var(--v-dur), background-color var(--v-dur), color var(--v-dur); }
+.plan-tile.is-active { border-color: var(--v-primary); background: var(--v-primary-soft); color: var(--v-primary); box-shadow: 0 0 0 1px var(--v-primary); }
+
+/* ---------- Map ---------- */
+.map-frame { position: relative; min-height: 22rem; height: 100%; overflow: hidden; border: 1px solid var(--v-border); border-radius: var(--radius-xl); background: var(--v-surface-2); box-shadow: var(--v-shadow-md); }
+.map-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; opacity: 0; transition: opacity var(--v-dur-slow); }
+.map-frame[data-state="ready"] iframe { opacity: 1; }
+.map-status { position: absolute; inset: 0; display: grid; place-content: center; justify-items: center; gap: 0.5rem; padding: 1.5rem; text-align: center; color: var(--v-muted); }
+.map-frame[data-state="ready"] .map-status { display: none; }
+.map-frame[data-state="error"] .map-status .map-spin { display: none; }
+.map-spin { width: 1.75rem; height: 1.75rem; border: 3px solid var(--v-border); border-top-color: var(--v-primary); border-radius: 50%; animation: spin 0.9s linear infinite; }
+.map-open { position: absolute; z-index: 2; inset-block-start: 0.75rem; inset-inline-start: 0.75rem; box-shadow: var(--v-shadow-sm); text-decoration: none; color: var(--v-text); }
+.map-open:hover { border-color: var(--v-primary); }
+[data-theme="dark"] .map-frame iframe { filter: invert(0.92) hue-rotate(180deg) brightness(0.95) contrast(0.92); }
+
+/* ---------- Form feedback ---------- */
+.form-alert { padding: 0.875rem 1rem; border: 1px solid var(--v-danger); border-radius: var(--radius-md); background: var(--v-danger-soft); color: var(--v-danger); font-size: 0.9375rem; font-weight: 600; }
+.form-alert[hidden], .success-panel[hidden], .form-body[hidden] { display: none; }
+.success-panel { display: grid; gap: 1rem; justify-items: start; padding: clamp(1.25rem, 1rem + 2vw, 2.5rem); border: 1px solid var(--v-success); border-radius: var(--radius-lg); background: var(--v-success-soft); }
+.success-panel h3 { color: var(--v-text); }
+.field .error-text:empty { display: none; }
+.hp-field { position: absolute; inset-inline-start: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.char-count { font-size: 0.8125rem; color: var(--v-muted); text-align: end; }

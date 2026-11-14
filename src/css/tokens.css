@@ -1,0 +1,138 @@
+/* ==========================================================================
+   VELORA — Semantic design tokens (light + dark)
+   Brand: Midnight Navy #101D38 · Indigo #526FF5 · Aqua #43D6C5 · Light #F6F8FC
+   All text pairs verified ≥ 4.5:1, UI boundaries ≥ 3:1 (WCAG 2.2 AA).
+   ========================================================================== */
+
+:root {
+  color-scheme: light;
+
+  /* Surfaces */
+  --v-bg: #f6f8fc;
+  --v-surface: #ffffff;
+  --v-surface-2: #eef2fa;
+  --v-surface-inverse: #101d38;
+
+  /* Text */
+  --v-text: #101d38;          /* 15.7:1 on bg */
+  --v-muted: #4a5878;         /* 6.7:1 on bg */
+  --v-text-inverse: #f6f8fc;
+
+  /* Lines */
+  --v-border: #dce3f0;        /* decorative dividers */
+  --v-border-strong: #7a88a8; /* form controls, 3.5:1 on white */
+
+  /* Brand roles */
+  --v-primary: #3b57e0;       /* indigo-600, 5.8:1 with white */
+  --v-primary-hover: #2f47c4;
+  --v-on-primary: #ffffff;
+  --v-primary-soft: #eef1fe;
+  --v-accent: #43d6c5;        /* aqua fill — never small text on light */
+  --v-accent-hover: #26bbaa;
+  --v-on-accent: #101d38;     /* 9.3:1 */
+  --v-accent-text: #0c7167;   /* 5.2:1+ on every light surface */
+  --v-accent-soft: #eafbf9;
+  --v-link: #3b57e0;
+  --v-link-hover: #2f47c4;
+  --v-ring: #526ff5;
+
+  /* Status */
+  --v-success: #157a42;  --v-success-soft: #e8f7ee;
+  --v-warning: #a35c00;  --v-warning-soft: #fef4e2;
+  --v-danger: #c9302c;   --v-danger-soft: #fdecec;
+  --v-info: #1d64c2;     --v-info-soft: #e8f0fc;
+
+  /* Elevation (navy-tinted) */
+  --v-shadow-xs: 0 1px 2px rgb(16 29 56 / 0.06);
+  --v-shadow-sm: 0 2px 6px -1px rgb(16 29 56 / 0.08), 0 1px 2px rgb(16 29 56 / 0.04);
+  --v-shadow-md: 0 8px 20px -6px rgb(16 29 56 / 0.12), 0 2px 6px rgb(16 29 56 / 0.05);
+  --v-shadow-lg: 0 18px 40px -12px rgb(16 29 56 / 0.18), 0 4px 10px rgb(16 29 56 / 0.06);
+  --v-shadow-xl: 0 32px 64px -20px rgb(16 29 56 / 0.26);
+  --v-shadow-glow: 0 10px 30px -8px rgb(82 111 245 / 0.45);
+
+  /* Glass */
+  --v-glass: rgb(255 255 255 / 0.72);
+  --v-overlay: rgb(10 19 38 / 0.55);
+
+  /* Brand gradient */
+  --v-gradient-brand: linear-gradient(135deg, #101d38 0%, #3b57e0 55%, #43d6c5 100%);
+  --v-gradient-soft: radial-gradient(60% 60% at 15% 10%, rgb(82 111 245 / 0.14), transparent 70%),
+    radial-gradient(50% 50% at 90% 20%, rgb(67 214 197 / 0.14), transparent 70%);
+
+  /* Layout */
+  --v-header-h: 72px;
+  --v-sidebar-w: 264px;
+  --v-container: 1280px;
+  --v-container-narrow: 960px;
+  --v-gutter: 16px;
+  --v-section-y: clamp(4rem, 3rem + 5vw, 7.5rem);
+  --v-section-y-sm: clamp(2.5rem, 2rem + 3vw, 4.5rem);
+
+  /* Motion */
+  --v-ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --v-ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --v-dur-fast: 150ms;
+  --v-dur: 250ms;
+  --v-dur-slow: 400ms;
+
+  /* Layers */
+  --v-z-dropdown: 40;
+  --v-z-header: 50;
+  --v-z-overlay: 60;
+  --v-z-drawer: 70;
+  --v-z-toast: 80;
+}
+
+@media (min-width: 768px) { :root { --v-gutter: 24px; } }
+@media (min-width: 1024px) { :root { --v-gutter: 32px; --v-header-h: 80px; } }
+
+/* .scope-dark re-themes any section to dark tokens, in either theme. */
+[data-theme="dark"],
+.scope-dark {
+  color-scheme: dark;
+
+  --v-bg: #0a1326;
+  --v-surface: #111d38;
+  --v-surface-2: #172647;
+  --v-surface-inverse: #f6f8fc;
+
+  --v-text: #e8edf8;          /* 15.8:1 on bg */
+  --v-muted: #a3b0cc;         /* 7.7:1 on surface */
+  --v-text-inverse: #101d38;
+
+  --v-border: #24355c;
+  --v-border-strong: #6a7a9e; /* 3.9:1 on surface */
+
+  --v-primary: #7d93ff;       /* 6.6:1 with navy text */
+  --v-primary-hover: #9aacff;
+  --v-on-primary: #0a1326;
+  --v-primary-soft: #1b2a55;
+  --v-accent: #43d6c5;
+  --v-accent-hover: #6de0d3;
+  --v-on-accent: #0a1326;
+  --v-accent-text: #5eead4;
+  --v-accent-soft: #0f3a3d;
+  --v-link: #7d93ff;
+  --v-link-hover: #9aacff;
+  --v-ring: #7d93ff;
+
+  --v-success: #4ade80;  --v-success-soft: #10331f;
+  --v-warning: #fbbf24;  --v-warning-soft: #3a2a08;
+  --v-danger: #f87171;   --v-danger-soft: #3d1416;
+  --v-info: #60a5fa;     --v-info-soft: #0f2648;
+
+  --v-shadow-xs: 0 1px 2px rgb(0 0 0 / 0.35);
+  --v-shadow-sm: 0 2px 6px -1px rgb(0 0 0 / 0.4);
+  --v-shadow-md: 0 8px 20px -6px rgb(0 0 0 / 0.5);
+  --v-shadow-lg: 0 18px 40px -12px rgb(0 0 0 / 0.55);
+  --v-shadow-xl: 0 32px 64px -20px rgb(0 0 0 / 0.6);
+  --v-shadow-glow: 0 10px 30px -8px rgb(125 147 255 / 0.4);
+
+  --v-glass: rgb(17 29 56 / 0.72);
+  --v-overlay: rgb(3 8 18 / 0.7);
+
+  --v-gradient-soft: radial-gradient(60% 60% at 15% 10%, rgb(82 111 245 / 0.22), transparent 70%),
+    radial-gradient(50% 50% at 90% 20%, rgb(67 214 197 / 0.14), transparent 70%);
+}
+
+.scope-dark { background-color: var(--v-bg); color: var(--v-text); }

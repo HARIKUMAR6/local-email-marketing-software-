@@ -1,0 +1,126 @@
+﻿/* ==========================================================================
+   VELORA â€” Tailwind CSS v4 entry
+   Build: npm run build  â†’  assets/css/velora.css
+   ========================================================================== */
+
+@import "tailwindcss" source(none);
+@import "./tokens.css";
+@import "./base.css" layer(base);
+@import "./components/layout.css" layer(components);
+@import "./components/buttons.css" layer(components);
+@import "./components/forms.css" layer(components);
+@import "./components/cards.css" layer(components);
+@import "./components/badges.css" layer(components);
+@import "./components/nav.css" layer(components);
+@import "./components/hero.css" layer(components);
+@import "./components/footer.css" layer(components);
+@import "./components/dashboard.css" layer(components);
+@import "./components/pv.css" layer(components);
+@import "./components/sections.css" layer(components);
+@import "./components/photo.css" layer(components);
+@import "./components/pages.css" layer(components);
+@import "./components/auth.css" layer(components);
+@import "./components/app.css" layer(components);
+
+/* Content sources (explicit â€” node_modules / assets never scanned) */
+@source "../../*.html";
+@source "../../dashboard/**/*.html";
+@source "../js/**/*.js";
+
+/* Theme + direction variants driven by <html data-theme> / <html dir> */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+@custom-variant rtl (&:where([dir="rtl"], [dir="rtl"] *));
+@custom-variant ltr (&:where([dir="ltr"], [dir="ltr"] *));
+
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* Breakpoints: mobile < 768 Â· tablet 768â€“1023 Â· desktop â‰¥ 1024 */
+  --breakpoint-sm: 40rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
+  --breakpoint-xl: 80rem;
+  --breakpoint-2xl: 90rem;
+
+  /* Brand primitives */
+  --color-velora-navy: #101d38;
+  --color-velora-indigo: #526ff5;
+  --color-velora-aqua: #43d6c5;
+  --color-velora-light: #f6f8fc;
+
+  --color-navy-50: #f6f8fc;
+  --color-navy-100: #eef2fa;
+  --color-navy-200: #dce3f0;
+  --color-navy-300: #b9c4dc;
+  --color-navy-400: #8592ae;
+  --color-navy-500: #5c6b8c;
+  --color-navy-600: #4a5878;
+  --color-navy-700: #2e3d60;
+  --color-navy-800: #1b2a4d;
+  --color-navy-900: #101d38;
+  --color-navy-950: #0a1326;
+
+  --color-indigo-50: #eef1fe;
+  --color-indigo-100: #dde3fd;
+  --color-indigo-200: #bcc8fb;
+  --color-indigo-300: #9aacff;
+  --color-indigo-400: #7d93ff;
+  --color-indigo-500: #526ff5;
+  --color-indigo-600: #3b57e0;
+  --color-indigo-700: #2f47c4;
+  --color-indigo-800: #283b9c;
+  --color-indigo-900: #23337a;
+  --color-indigo-950: #161f4a;
+
+  --color-aqua-50: #eafbf9;
+  --color-aqua-100: #ccf5f0;
+  --color-aqua-200: #9cebe2;
+  --color-aqua-300: #6de0d3;
+  --color-aqua-400: #43d6c5;
+  --color-aqua-500: #26bbaa;
+  --color-aqua-600: #18998b;
+  --color-aqua-700: #0e7f74;
+  --color-aqua-800: #0f655d;
+  --color-aqua-900: #10534d;
+  --color-aqua-950: #03322f;
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+
+  /* Motion */
+  --ease-velora: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Semantic tokens exposed as utilities (bg-surface, text-muted, border-line â€¦) */
+@theme inline {
+  --color-bg: var(--v-bg);
+  --color-surface: var(--v-surface);
+  --color-surface-2: var(--v-surface-2);
+  --color-fg: var(--v-text);
+  --color-muted: var(--v-muted);
+  --color-line: var(--v-border);
+  --color-line-strong: var(--v-border-strong);
+  --color-primary: var(--v-primary);
+  --color-primary-hover: var(--v-primary-hover);
+  --color-on-primary: var(--v-on-primary);
+  --color-primary-soft: var(--v-primary-soft);
+  --color-accent: var(--v-accent);
+  --color-accent-text: var(--v-accent-text);
+  --color-accent-soft: var(--v-accent-soft);
+  --color-success: var(--v-success);
+  --color-warning: var(--v-warning);
+  --color-danger: var(--v-danger);
+  --color-info: var(--v-info);
+
+  --shadow-xs: var(--v-shadow-xs);
+  --shadow-sm: var(--v-shadow-sm);
+  --shadow-md: var(--v-shadow-md);
+  --shadow-lg: var(--v-shadow-lg);
+  --shadow-xl: var(--v-shadow-xl);
+  --shadow-glow: var(--v-shadow-glow);
+}

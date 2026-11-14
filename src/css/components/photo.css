@@ -1,0 +1,32 @@
+/* Photography: framed photos, captions over images, hero and CTA backdrops. */
+
+.photo { position: relative; isolation: isolate; overflow: hidden; border-radius: var(--radius-xl); background: var(--v-surface-2); }
+.photo > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.photo.is-framed { border: 4px solid var(--v-surface); box-shadow: var(--v-shadow-xl); }
+.photo-shade::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgb(10 19 38 / 0.82), rgb(10 19 38 / 0.04) 66%); }
+.photo-cap { position: absolute; inset-inline: 1.25rem; bottom: 1.125rem; z-index: 1; text-align: start; color: #fff; }
+.photo-cap :is(h2, h3, h4, p) { color: #fff; }
+.photo-cap p { opacity: 0.92; }
+[data-theme="dark"] .photo > img, .scope-dark .photo > img { filter: brightness(0.9) saturate(0.95); }
+
+/* Hero backdrop — fades out behind the copy */
+.hero-photo { position: absolute; z-index: -1; inset-block: 0; inset-inline-end: 0; width: min(54%, 56rem); pointer-events: none; }
+.hero-photo img { width: 100%; height: 100%; object-fit: cover; opacity: 0.5; -webkit-mask-image: linear-gradient(to left, #000 38%, transparent); mask-image: linear-gradient(to left, #000 38%, transparent); }
+[dir="rtl"] .hero-photo img { -webkit-mask-image: linear-gradient(to right, #000 38%, transparent); mask-image: linear-gradient(to right, #000 38%, transparent); }
+.hero-photo.is-full { inset: 0; width: 100%; }
+.hero-photo.is-full img { opacity: 0.26; -webkit-mask-image: linear-gradient(to bottom, #000 45%, transparent); mask-image: linear-gradient(to bottom, #000 45%, transparent); }
+.hero-photo.is-full.is-bright img { opacity: 0.4; }
+.hero-photo.is-bright::after { content: ""; position: absolute; inset: 0; background: radial-gradient(62% 58% at 50% 46%, rgb(10 19 38 / 0.8), transparent 85%); }
+[data-theme="dark"] .hero-photo img { opacity: 0.38; }
+@media (max-width: 1023.98px) {
+  .hero-photo { width: 100%; }
+  .hero-photo img { opacity: 0.16; }
+  [data-theme="dark"] .hero-photo img { opacity: 0.2; }
+}
+
+/* CTA band backdrop */
+.cta-photo { position: absolute; z-index: -1; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.4; mix-blend-mode: luminosity; pointer-events: none; -webkit-mask-image: linear-gradient(to left, #000 8%, transparent 80%); mask-image: linear-gradient(to left, #000 8%, transparent 80%); }
+[dir="rtl"] .cta-photo { -webkit-mask-image: linear-gradient(to right, #000 8%, transparent 80%); mask-image: linear-gradient(to right, #000 8%, transparent 80%); }
+
+/* Vivid CTA photo variant (About/Features) — photo stays visible, darkened for text contrast */
+.cta-photo.is-vivid { opacity: 0.7; mix-blend-mode: normal; filter: brightness(0.55) saturate(0.95); }

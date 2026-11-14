@@ -1,0 +1,32 @@
+/* Viewport-height hero system (public pages)
+   Fills the viewport below the sticky header; content always container-contained. */
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: calc(100vh - var(--v-header-h));
+  min-height: calc(100svh - var(--v-header-h));
+  padding-block: var(--v-section-y-sm);
+  overflow: clip;
+  isolation: isolate;
+}
+.hero > .container-v, .hero > .container-narrow { position: relative; z-index: 1; }
+
+.hero-bg { position: absolute; inset: 0; z-index: -1; background: var(--v-gradient-soft); pointer-events: none; }
+
+.hero-content { display: grid; gap: clamp(1.25rem, 1rem + 1vw, 1.75rem); max-width: 40rem; }
+.hero-start .hero-content { text-align: start; justify-items: start; }
+.hero-center .hero-content { text-align: center; justify-items: center; margin-inline: auto; max-width: 48rem; }
+
+/* Two-column split (content + visual); stacks on mobile/tablet */
+.hero-split { display: grid; gap: clamp(2.5rem, 2rem + 3vw, 4rem); align-items: center; }
+@media (min-width: 1024px) { .hero-split { grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); } }
+
+/* Mobile: center hero copy + CTAs regardless of desktop alignment */
+@media (max-width: 767.98px) {
+  .hero-start .hero-content { text-align: center; justify-items: center; margin-inline: auto; }
+}
+
+/* Inner-page hero (shorter, still balanced) */
+.hero-compact { min-height: auto; padding-block: var(--v-section-y); }

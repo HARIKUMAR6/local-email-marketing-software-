@@ -1,0 +1,66 @@
+/* Containers, sections, alignment helpers, CTA groups, scroll-to-top */
+
+.container-v,
+.container-narrow {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: var(--v-gutter);
+}
+.container-v { max-width: calc(var(--v-container) + var(--v-gutter) * 2); }
+.container-narrow { max-width: calc(var(--v-container-narrow) + var(--v-gutter) * 2); }
+
+.section { padding-block: var(--v-section-y); position: relative; }
+.section-sm { padding-block: var(--v-section-y-sm); position: relative; }
+.section-alt { background-color: var(--v-surface-2); }
+
+/* Section heading block — left (default) or centered only */
+.section-head { display: grid; gap: 1rem; max-width: 44rem; margin-bottom: clamp(2rem, 1.5rem + 2vw, 3.5rem); }
+.section-head.is-center { margin-inline: auto; text-align: center; justify-items: center; }
+
+/* Alignment: start + center only (no right/justify) */
+.align-start { text-align: start; }
+.align-center { text-align: center; }
+
+/* CTA group — centered on mobile, start-aligned from tablet up */
+.cta-group { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.75rem; }
+@media (max-width: 767.98px) {
+  .cta-group > .btn { flex: 1 1 100%; max-width: 22rem; }
+}
+@media (min-width: 768px) {
+  .cta-group { justify-content: flex-start; }
+  .cta-group.is-center,
+  .align-center .cta-group,
+  .hero-center .cta-group { justify-content: center; }
+}
+
+/* Responsive media frame — keeps future visuals contained */
+.media-frame { position: relative; overflow: hidden; border-radius: var(--radius-xl); background: var(--v-surface-2); }
+.media-frame > img, .media-frame > svg { width: 100%; height: 100%; object-fit: cover; }
+
+/* Scroll-to-top */
+.scroll-top {
+  position: fixed;
+  inset-inline-end: clamp(1rem, 2vw, 1.75rem);
+  bottom: clamp(1rem, 2vw, 1.75rem);
+  z-index: var(--v-z-toast);
+  display: grid; place-items: center;
+  width: 3rem; height: 3rem;
+  border-radius: 999px;
+  background: var(--v-primary);
+  color: var(--v-on-primary);
+  box-shadow: var(--v-shadow-glow);
+  opacity: 0; visibility: hidden; transform: translateY(12px);
+  transition: opacity var(--v-dur) var(--v-ease-out), transform var(--v-dur) var(--v-ease-out),
+    visibility var(--v-dur), background-color var(--v-dur-fast);
+}
+.scroll-top.is-visible { opacity: 1; visibility: visible; transform: none; }
+.scroll-top:hover { background: var(--v-primary-hover); }
+.scroll-top svg { width: 1.25rem; height: 1.25rem; }
+
+/* Brand logo lockup */
+.logo { display: inline-flex; align-items: center; gap: 0.625rem; color: var(--v-text); text-decoration: none; }
+.logo-mark { width: 2.5rem; height: 2.5rem; flex-shrink: 0; }
+.logo-word { font-weight: 800; font-size: 1.3125rem; letter-spacing: 0.14em; line-height: 1; }
+.logo-tag { display: block; margin-top: 0.3rem; font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.02em; color: var(--v-muted); }
+
+.divider { height: 1px; border: 0; background: var(--v-border); }

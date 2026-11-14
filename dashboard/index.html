@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-base="../">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Overview — VELORA Dashboard</title>
+  <meta name="theme-color" content="#101D38">
+  <meta name="robots" content="noindex">
+  <script>(function(){var r=document.documentElement;r.classList.add('js');try{var t=localStorage.getItem('velora-theme'),d=localStorage.getItem('velora-dir');r.dataset.theme=t||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');if(d==='rtl'||d==='ltr')r.dir=d;}catch(e){r.dataset.theme='light';}})();</script>
+  <link rel="icon" type="image/svg+xml" href="../assets/svg/logo-mark.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="../assets/css/velora.css">
+  <script type="module" src="../src/js/dashboard.js"></script>
+</head>
+<body>
+  <a class="skip-link sr-only-focusable" href="#main">Skip to content</a>
+  <div class="app">
+    <div data-component="sidebar"></div>
+    <div class="app-main">
+      <div data-component="topbar"></div>
+      <main id="main" class="app-content">
+        <div class="app-content-inner" id="view"></div>
+      </main>
+    </div>
+  </div>
+  <noscript><p style="padding:1rem">The VELORA dashboard needs JavaScript to run.</p></noscript>
+</body>
+</html>
